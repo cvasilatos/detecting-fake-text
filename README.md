@@ -23,7 +23,7 @@ Install dependencies for Python >3.6 :
 pip install -r requirements.txt
 ```
 
-run server for `gpt-2-small`:
+run server for `gpt2`:
 
 ```bash
 python server.py
@@ -50,7 +50,7 @@ usage: server.py [-h] [--model MODEL] [--nodebug NODEBUG] [--address ADDRESS]
 
 optional arguments:
   -h, --help         show this help message and exit
-  --model MODEL		 choose either 'gpt-2-small' (default) or 'BERT' or your own
+  --model MODEL		 choose either 'gpt2' (default) or 'BERT' or your own
   --nodebug NODEBUG  server in non-debugging mode
   --port PORT	     port to launch UI and API (default:5001)
   --no_cors          launch API without CORS support (default: False)
