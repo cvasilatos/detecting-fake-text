@@ -1,0 +1,1593 @@
+Set 1:
+Given the following assumptions: Host IP address 135.168.1.50, Host MAC address 8a:00:12:3e:d6:be, Host Name myhost.mysubnet.com, Netmask 255.255.255.0 or /24, Router IP address/Default gateway 135.168.1.1, and DNS IP address 8.8.8.8, explain in detail in the report every step that is taken to initiate a connection with www.cyberwarfarenyuad.com. Specify each protocol used and why. Assume there is no cached information for this question. Please answer the following questions:
+
+Question 1: What is the difference between a host name and a host IP address? How is each utilized during this process?
+
+Student1:
+In order to initiate a connection with www.cyberwarefarenyuad.com, the host machine undergoes a series
+of steps. When this URL is typed into the browser, the browser intends to communicate with the server.
+To do that, it first extracts the hostname from said URL. In this case, the hostname is
+‘myhost.subnet.com’. The browser then looks up the IP address for this hostname, which is done through
+a Domain Name System (DNS) lookup, giving us the IP 192.168.1.50 for this URL. Host
+names are labels that are assigned to computers to identify them on the network. It is essential to
+differentiate different devices from each other and is used to send the user to a particular webpage. On the
+other hand, a host IP address is a numerical label assigned to each device
+
+Student2:
+Host name or otherwise called domain name is utilised when a web client sends an HTTP request to a host, Host names are used rather than IP address as they are easier to be remembered. However, host names are mapped to IP addresses, but a host name and an IP address do not have a one-to-one relationship as services in the name of one host can be provided by many servers, which have different IP addresses.
+
+
+Student3:
+Whenever a user tries to access a website - he types its address in the browser, as in gmail.com or wikipedia.org. But, on
+the internet, the IP addresses are the ones that are actually being used. Host IP addresses are essentially the IP addresses
+translated into words, they enable the users to easily access the website without the need of typing in the actual IP address
+every time. The browser does that translation internally, using the domain name system (DNS). We can think of DNS
+servers as routers that send packages of information or a dictionary that links hostnames to the IP addresses. DNS servers
+respond to questions from clients (users). Clients give the website name (the hostname) and DNS finds a corresponding IP
+address for that website. So the first step in connecting to www.cyberwarfarenyuad.com would be the retrieval of the IP
+address from the DNS.
+
+GPT 1:
+A host name is a human-readable label that is assigned to a device, such as a computer or a router, on a network. It is used to identify the device on the network and is typically composed of a series of alphanumeric characters separated by periods, such as "myhost.mysubnet.com".
+
+A host IP address, on the other hand, is a numerical label assigned to a device on a network. It is used to identify and locate the device on the network, and is typically represented in the form of four octets separated by periods, such as "135.168.1.50".
+
+In the process of initiating a connection with www.cyberwarfarenyuad.com, the host name is first utilized by the client device to initiate a DNS (Domain Name System) query. The DNS is a distributed database that maps domain names to IP addresses. The client device sends a request to the DNS server specified in its network configuration (8.8.8.8) to resolve the host name "www.cyberwarfarenyuad.com" to its corresponding IP address. Once the IP address is received, the client device can then utilize the host IP address to initiate a connection with the target website.
+
+In summary, host names are used to identify devices on a network in a human-readable format, while host IP addresses are used to identify and locate devices on a network in a numerical format. The host name is used to initiate a DNS query to resolve the domain name to IP address, once the IP address is received the host IP address is used to initiate the connection.
+
+GPT 2:
+A host name is a human-readable string that identifies a device on a network. It is typically used to make it easier for users to remember the address of a device, rather than having to remember its numerical IP address. In this case, the host name is "myhost.mysubnet.com".
+
+A host IP address, on the other hand, is a numerical address assigned to a device on a network. It is used to identify and locate the device on the network, allowing other devices to communicate with it. In this case, the host IP address is 135.168.1.50.
+
+During the process of initiating a connection with www.cyberwarfarenyuad.com, the host name is not used directly. Instead, the host will use its IP address to initiate the connection. However, the host name is used in the process of resolving the domain name "www.cyberwarfarenyuad.com" to an IP address, which is necessary for the host to initiate the connection.
+
+The process of resolving a domain name to an IP address is known as DNS resolution. The host will begin by checking its local cache for a previously resolved IP address for the domain name "www.cyberwarfarenyuad.com". If there is no cached information, the host will send a DNS query to the DNS server specified by its network configuration, which in this case is 8.8.8.8.
+
+The DNS server will then check its own cache for a previously resolved IP address for the domain name. If it does not find one, it will send a recursive query to other DNS servers on the internet, following the hierarchical structure of the DNS system. These servers will check their own caches and send further queries until the IP address for the domain name is found.
+
+Once the IP address is found, it is returned to the host in the form of a DNS response, along with any additional information such as the Time-To-Live (TTL) value for the IP address. The host will then cache this information for future use.
+
+The following protocols are used in this process:
+
+	User Datagram Protocol (UDP): This protocol is used for the initial DNS query sent by the host to the DNS server. It is used because it is a connectionless protocol, which means that it does not require a dedicated connection to be established before data is exchanged. This allows the host to quickly send a query and receive a response without the overhead of establishing a connection.
+
+	Transmission Control Protocol (TCP): This protocol is used for the recursive queries sent by the DNS server to other DNS servers on the internet. It is used because it is a connection-oriented protocol, which means that a dedicated connection is established before data is exchanged. This allows for reliable and error-free transmission of the queries and responses.
+
+	Internet Protocol (IP): This protocol is used to route the DNS query and response packets through the internet. It is used because it provides the necessary addressing information for the packets to reach their destination.
+
+In summary, the host uses UDP to quickly send a DNS query to the DNS server and receive a response. The DNS server uses TCP to send recursive queries to other DNS servers on the internet and receive responses in a reliable manner. IP is used to route the packets through the internet to their destination.
+
+GPT 3:
+A host name is a unique name assigned to a device on a network, such as "myhost.mysubnet.com" in this scenario. It is used for human-readable identification and organization of devices on a network. A host IP address, on the other hand, is a numerical label assigned to each device on a network, such as "135.168.1.50" in this scenario. It is used for routing and addressing purposes on the network.
+
+In this process, the host name "myhost.mysubnet.com" is used initially to initiate a connection with the website "www.cyberwarfarenyuad.com." However, the host name needs to be translated into a host IP address in order for the connection to be established. This is where the Domain Name System (DNS) comes into play. The host sends a DNS request to the DNS IP address of 8.8.8.8, asking for the IP address associated with the host name "www.cyberwarfarenyuad.com." Once the DNS server returns the IP address, the host uses it to establish a connection with the website.
+
+In summary, the host name is used for identification and organization, while the host IP address is used for routing and addressing. The host name is initially used to initiate the connection, but it is translated into a host IP address through the use of DNS before the connection can be established.
+
+Question 2: What are MAC addresses and when are they used during the communication?
+
+Student1:
+All the devices in your (wireless) network have MAC addresses. MAC stands for Media Access Control, and it identifies
+which device is which on your local network. When data arrives at your router, it has to decide where to forward it. The
+router keeps track of all the devices’ MAC addresses in your network. It then assigns a private IP address to a device
+(which usually starts with 192.168). This IP address is different from the public IP address of your entire network that
+everyone on the internet sees. The router attaches a private IP address to the data packets that you receive from the
+internet in order to ensure proper delivery to your device. Even though public and private IP addresses stay the same, the
+MAC addresses on data packets are constantly being changed. The packets tell the data where it’s supposed to go next.
+Once the data reaches the next device, the MAC address changes once again in order to it to tell where it’s going next.
+Many devices have MAC addresses hard-coded in their firmware (i.e they stay the same). This is helpful when for
+instance one needs to spot a malfunctioning device, as they can locate it using the MAC address. Another way to use
+MAC addresses is to list devices that you approve to connect to your network. In this way, even if one were to steal your
+WiFi password, or even connect to your network physically, they wouldn’t be able to utilize it, since only the devices
+having the approved MAC addresses can do so. ISPs also use MAC addresses to identify the devices that they provide
+with the internet connection, and they can also use them to block the connection.
+The browser keeps track of outbound requests so when one clicks a link online, it sends the data to the router, and attaches
+the correct private IP address to the data packets sent, ensuring that they arrive at the correct destination. All the private
+IPs correspond to their MAC addresses, and the computer needs both
+
+Student2:
+A MAC address or (media access control) address is a unique identifier assigned to a (NIC) network interface controller for use as a network address to uniquely identify a device on the network. MAC is also essential component required for network protocols like TCP/IP to function which is the most optimal protocol used in this case as TCP/IP protocol makes sure that the packages have reached the destination.
+All devices communicate only through MAC, when the computer wants to establish a connection with www.cyberwarfarenyuad.com, The PC finds the IP of the website (8.8.8.8)  then checks the local routing table, and finds the router to send the request, in this case ( the router with IP 192.168.1.1). The PC puts the IP (8.8.8.8)  as the destination in the packet and sends it to the router. It finds the Mac of the gateway using ARP (address resolution protocol) and sends the packet to the switch it is connected to, which then checks the routing table with MAC ID’s which indicates the port via which the packet has to be forwarded based on the destination MAC.
+To send this data packet to the destination, switches have a routing table which they make by learning MAC from ARP and sending BPDU ( Bridge protocol data unit ) between neighbouring switches. Hence the packet reaches the gateway, which does the same thing to route the packet to next hop using its MAC.
+
+
+Student3:
+Every device in a particular network
+also has its own unique Media Access Control address that helps in the establishment of physical
+connections between devices within a particular network and it provides physical identifiers of a
+particular device. MAC addresses are 48-bit addresses (in this example, the MAC address is
+8a:00:12:3e:d6:eb) and it remains unique, while IP addresses are recycled as and when devices connect
+and disconnect. When a data package for a device in the LAN arrives at the default gateway (in this
+case, 192.168.1.1), an Address Resolution Protocol matches the IP address with a MAC address. In this
+way, MAC addresses help in communication.
+
+GPT 1:
+MAC addresses, or Media Access Control addresses, are unique identifiers assigned to each device on a network. They are used to identify devices on the data link layer (layer 2) of the OSI model.
+
+During the communication process, MAC addresses are used when the host (with the MAC address 8a:00:12:3e:d6:be) initiates a connection with the router (default gateway) which is assigned with a different MAC address. The host sends an ARP (Address Resolution Protocol) request to the router, asking for the router's MAC address. The router then responds with its MAC address, which the host uses to establish a connection with the router.
+
+Once the host is connected to the router, the router uses the host's MAC address to forward the data packets to the host. The router also uses the host's MAC address to keep track of the host's location on the network, and to ensure that the data packets are only sent to the correct device.
+
+Therefore, MAC addresses are used at the beginning of the communication process to establish a connection with the router and then throughout the communication process to forward data packets and keep track of the host's location on the network.
+
+GPT 2:
+MAC (Media Access Control) addresses are unique, physical addresses assigned to network devices, such as the host device in this scenario with a MAC address of 8a:00:12:3e:d6:be. They are used to identify and address devices on a local area network (LAN).
+
+During the communication process, MAC addresses are used when the host device sends a request to the router (default gateway) to establish a connection with the website. The host device sends an ARP (Address Resolution Protocol) request to the router to determine its MAC address, as it is necessary for the host device to identify the router in order to establish a connection. This ARP request is broadcasted to all devices on the LAN, and the router responds with its MAC address, allowing the host device to establish a connection and send the DNS request.
+
+In summary, MAC addresses are unique physical addresses assigned to network devices and are used to identify and address devices on a local area network. They are used during the communication process when the host device sends an ARP request to the router to determine its MAC address before establishing a connection.
+
+GPT 3:
+MAC (Media Access Control) addresses are unique physical addresses assigned to network devices, such as the host's MAC address "8a:00:12:3e:d6:be" in this scenario. They are used to identify and address devices on a local area network (LAN).
+
+MAC addresses are used during the communication process when the host initiates a connection with the router (default gateway) to reach the website. The host sends an ARP (Address Resolution Protocol) request to the router, asking for the MAC address associated with the router's IP address "135.168.1.1." The router then sends an ARP reply with its MAC address, allowing the host to establish a connection with it.
+
+In summary, MAC addresses are unique physical addresses assigned to network devices, used to identify and address devices on a LAN. They are used during the communication process when the host initiates a connection with the router, through the use of the ARP protocol.
+
+Question 3: How does the communication request travel from the client to the server side? Which port numbers are used during this operation and how are they utilized?
+
+Student1:
+The ARP is a component of the next layer – the internetwork layer. This is where the IP addresses play
+the most important role, and where the data travels in packets from one address to the next. IP addresses
+are very efficient aids to transportation. While the host name shows the user-readable version of the
+device’s name, the host IP address gives information on the location to which the data must be routed.
+The succeeding layer is the transport layer that serves as an assurance of an effective transportation
+system. The protocols that come into play here include TCP and UDP, where the former ensures quality
+of the data and the latter ensures that the data gets delivered in real time, although at the slight expense
+of high quality. The topmost layer is the Application layer which sends the host device data on the
+webpage, email, etc that needs to be accessed. A significant Application layer protocol is the Hypertext
+Transfer Protocol (HTTP). It is the foundation of the World Wide Web. In this example, too, HTTP
+plays an important role in accessing www.cyberwarfarenyuad.com.
+In the example, the process begins with the user entering the Uniform Resource Locator (URL) on the
+browser from the host device. The URL is a human-readable address that needs to be translated into a
+machine-readable IP address so that the webpage can be accessed. The browser retrieves the required
+IP address from the Domain Name System (DNS). In this case, the DNS’s IP address is 8.8.8.8, which
+corresponds to Google’s DNS (implying that the browser being used is Google). Every application that
+uses the Internet to operate receives a port number that facilitates communication. Since the HTTP
+protocol is used in this case, the port number is 80, and the web server expects to receive requests from
+the client via this port. The browser makes a TCP connection to www.cyberwarfarenyuad.com’s IP
+address via port number 80 and communicates information on itself, the requested data and more. This
+information is sent via the router that adds its public IP address to the request and sends it as a data
+packet to the server.
+
+Student2:
+Port 443 as it is the port assigned to commonly used internet communication protocol, HTTPS, or port 80 if the website was not secured (HTTP). It is the default network port used to send and receive unencrypted web pages. This port number is given after the IP address so that the server can identify which service or program the client wants to use.
+
+Student3:
+A port is a logical connection that is used by services and programs to exchange information, it determines the specific
+program or service that is going to be used. Its values range from 0 to 65535. Some of the common port numbers are 80,
+443 - Web pages (HTTP, HTTPS), 21 FTP (File Transfer Protocol), and 25 - email (SMTP). Port numbers are always
+associated with an IP address, they work together to exchange data.
+Everything connected directly or indirectly to the internet has an IP address (e.g. computers, phones, servers, etc.) Servers
+are computers directly connected to the internet and every internet server has an Internet Protocol (IP) address. Unlike
+servers, the computers you and I use are called clients, they are connected indirectly to the internet through an internet
+service provider (ISP)
+
+GPT 1:
+The communication request travels from the client (the host) to the server side (the website) through a series of steps using various protocols. The process can be broken down into the following steps:
+
+	The host initiates a connection by sending a DNS request to the DNS IP address of 8.8.8.8, asking for the IP address associated with the host name "www.cyberwarfarenyuad.com."
+
+	Once the DNS server returns the IP address, the host uses it to initiate a connection with the router (default gateway) by sending an ARP request to the router's IP address "135.168.1.1," asking for the router's MAC address.
+
+	The router sends an ARP reply with its MAC address, allowing the host to establish a connection with it.
+
+	The host sends an IP packet to the router, containing the destination IP address of the website (the IP address returned by the DNS server) and the destination port number of 80 (HTTP protocol), which is the standard port number used for web communication.
+
+	The router then forwards the packet to the website's server by using routing tables and the Internet Protocol (IP) and the Transmission Control Protocol (TCP)
+
+	The website's server receives the packet and processes the request. It then sends a response back to the host, again using the IP and TCP protocols.
+
+In summary, the communication request travels from the client to the server side through a series of steps using various protocols. The host name is translated into an IP address through the use of DNS, and the host establishes a connection with the router through the use of ARP. The host then sends an IP packet to the router, containing the destination IP address of the website and the destination port number of 80 (HTTP protocol). The router then forwards the packet to the website's server, and the server sends a response back to the host.
+
+GPT 2:
+The communication request travels from the client (host) to the server (website) through a series of network layers and protocols. The process can be summarized in the following steps:
+
+	The host initiates a connection with the website by sending an HTTP (Hypertext Transfer Protocol) request to the website's IP address, obtained through the DNS resolution process.
+
+	The request is sent to the router (default gateway) through the use of the ARP protocol, as previously explained.
+
+	The router uses its routing table to determine the next hop for the request and forwards it to the next network device (such as a switch or another router) or directly to the Internet.
+
+	The request is then sent to the website's server, where it is received by the web server software (such as Apache or Nginx)
+
+	After the web server software receives the request it will then proceed to open a port number and waits for the client (host) to send a request, this is called a port number.
+
+	The web server software processes the request and sends an HTTP response back to the host, which includes the requested webpage or any error message.
+
+The port numbers used during this operation are typically port 80 for HTTP and 443 for HTTPS. Port numbers are used to identify specific services or applications running on a device and to route the incoming request to the appropriate service or application.
+
+In summary, the communication request travels from the client (host) to the server (website) through a series of network layers and protocols, including the use of the HTTP protocol, the IP routing, and the ARP protocol. Port numbers, such as port 80 and 443, are used to identify specific services or applications running on a device and to route the incoming request to the appropriate service or application.
+
+GPT 3:
+When the host initiates a connection with the website "www.cyberwarfarenyuad.com," the communication request travels from the client (host) to the server (website) in the following steps:
+	•	The host sends a DNS request to the DNS IP address of 8.8.8.8, asking for the IP address associated with the host name "www.cyberwarfarenyuad.com."
+	•	The DNS server returns the IP address associated with the host name, which the host uses to initiate a connection with the website.
+	•	The host sends an ARP request to the router, asking for the MAC address associated with the router's IP address "135.168.1.1."
+	•	The router sends an ARP reply with its MAC address, allowing the host to establish a connection with it.
+	•	The host sends an IP packet to the router, containing the destination IP address of the website "www.cyberwarfarenyuad.com."
+	•	The router forwards the IP packet to the website based on the destination IP address.
+During this operation, the following port numbers are used:
+	•	The host uses port number 53 for the DNS request and DNS response.
+	•	The host uses port number 0 for the ARP request and ARP response.
+	•	The host uses the transport-layer protocol, such as TCP or UDP, to establish a connection with the website. The ports numbers will be defined by the protocol that is used. For example, if the host uses HTTP(S) protocol, the host will use port 80 for HTTP and 443 for HTTPS.
+In summary, the communication request travels from the client to the server by passing through the host, router, and DNS server. The host uses port number 53 for the DNS request and response, port number 0 for the ARP request and response, and the transport-layer protocol to establish a connection with the website. The transport-layer protocol will use the appropriate port number to communicate with the server.
+
+Question 4: How do the contents of the website eventually reach the client?
+
+Student1:
+Anywhere two or more parts of the internet intersect, the piece of equipment called a router comes into the game. In
+general, a router is a device that connects two different IP networks and acts as a gateway, the hosts from two different
+ends can send the traffic through it. Most hosts will have one interface with an IPv4 address, while a router will have two
+or more. The host on a local network knows about the default gateway - the router that is connected with the rest of the
+internet. Computers attached to the same switch or WiFI access point can easily send data packages to one another
+without a need to go through a different network, as they are connected locally. A default gateway may have another
+default gateway connected to it, but as we go forward we will reach a point where there is the default less part, where
+routers on major transit ISPs know about the global rounding table - the directory of all public IP networks. Those routers
+do not have default gateways.
+
+Student2:
+The browser goes to the DNS server, and finds the real address of the server that the website lives on (8.8.8.8). Then the browser sends an HTTP request message to the server, asking it to send a copy of the website to the client. This message, and all other data sent between the client and the server, is sent across your internet connection using TCP/IP. If the server approves the client's request, the server sends the client a message confirming the connection is successful, and then starts sending the website's files to the browser as a series of small chunks called data. The browser assembles the small chunks into a complete web page and displays it.
+
+
+Student3:
+The information is processed by the web server that finally sends a status code to the browser. The
+contents of the desired webpage are then sent in the form of data packets that reach the router and
+finally, to the host device through ARP. The data packets contain information on assembling the
+webpage that are analyzed by the web browser. The packets contain code in HTML, CSS, and more,
+and these are processed by the rendering engine of the browser. The user finally sees a complete
+webpage.
+
+
+GPT 1:
+Once the host establishes a connection with the website "www.cyberwarfarenyuad.com," the contents of the website eventually reach the client in the following steps:
+	•	The host sends a request to the website, using the transport-layer protocol (such as TCP or UDP) and the appropriate port number, asking for the specific web page or resource it wants to access.
+	•	The website receives the request and processes it, fetching the requested web page or resource from its server.
+	•	The website sends a response to the host, containing the requested web page or resource, along with any associated data or media.
+	•	The host receives the response and processes the contents of the web page, displaying it on the client device.
+In summary, the contents of the website reach the client by the host sending a request to the website using the transport-layer protocol and the appropriate port number, the website sending a response containing the requested web page or resource, and the host receiving and processing the contents of the web page, displaying it on the client device.
+
+GPT 2:
+
+	•	The host sends an HTTP request to the website, asking for the specific webpage or resource.
+	•	The website receives the request and sends an HTTP response, which contains the requested webpage or resource.
+	•	The response is sent back to the host in the form of IP packets, containing the requested webpage or resource.
+	•	The host receives the IP packets and reassembles them into the requested webpage or resource.
+	•	The host displays the contents of the webpage or resource on the client device.
+During this operation, the host uses the HTTP protocol to communicate with the website. The HTTP protocol uses port number 80 for unencrypted communication and port number 443 for encrypted communication.
+In summary, the contents of the website reach the client through the use of the HTTP protocol, which is used to request and receive the webpage or resource. The requested webpage or resource is sent back to the host in the form of IP packets, which are reassembled and displayed on the client device.
+GPT 3:
+
+	•	The host sends a request for the contents of the website, typically using the HTTP (Hypertext Transfer Protocol) or HTTPS (HTTP Secure) protocol.
+	•	The request is sent to the website's server, which processes the request and retrieves the requested content from its database.
+	•	The server sends a response to the host, which includes the requested content, such as HTML, CSS, JavaScript, and images.
+	•	The response is received by the host, which uses the information in the response to display the website's contents on the client's web browser.
+	•	The host continues to send and receive requests and responses as the client interacts with the website, such as clicking on links or submitting forms.
+In summary, the contents of the website reach the client through the process of requesting and receiving information from the website's server using the HTTP or HTTPS protocol. The host uses the information in the response to display the website's contents on the client's web browser.
+
+Set 2:
+Question 5: This question seeks information about today’s cyber-threat landscape. In a few paragraphs, please describe the types of cyber-threats available, and also describe the motivation behind using cyber-attacks instead of physical attacks.
+
+Student1:
+Each piece of technology (software or hardware) that people
+use can have many vulnerabilities, which, sooner or later, can
+be maliciously used to attack individuals, enterprises, or even
+governments.
+A cyber-attack may consist of multiple steps. A typical cyber-attack consists of:
+• Reconnaissance - gathering information and finding vul-
+nerabilities in the target computer/network/device.
+• Penetration - gaining access.
+• Stealing of valuable data or insertion of malware (mali-
+cious software) into the target.
+• Obfuscation - hiding the traces of the attack.
+The first step of almost every cyber attack is gathering some
+information. As we use the internet on the daily basis, if
+we do not take necessary measures, our sensitive information
+becomes exposed to the public and at any point can be used
+maliciously against us. For example, many individuals and
+even enterprises such as nuclear plants may connect to the
+public internet which makes their actions exposed to everyone.
+If a person uses an HTTP connection, then his/her connec-
+tion will be visible to everyone. Even with HTTPS, there’s a
+chance of someone listening to the information. For example,
+during the Man-in-the-Middle attack, the attacker spoofs the
+certificate and sees the information that is being transferred.
+The victim doesn’t see anything suspicious, because the infor-
+mation still arrives at the destination.
+After finding a technical vulnerability, for example, a zero-
+day vulnerability, in some software or hardware, the attackers
+can exploit it for getting access. Zero-day vulnerabilities are
+vulnerabilities that have recently been discovered and not yet
+disclosed or fixed. For example, EternalBlue and EternalRo-
+mance vulnerabilities in Windows, after being leaked from
+NSA, were used for Trojans such as TrickBot and Emotet.
+Also, because of prioritizing profit over security, many
+enterprises may use commercial off-the-shelf products instead
+of developing their own software/hardware. Because of this, if
+vulnerabilities are found in one of those products, the whole
+business might be in danger.
+
+Instead of vulnerabilities in software/hardware, the reckless-
+ness of the user can be exploited for gaining access to the
+target system. For example, the Mirai botnet spread through
+thousands of IoT devices all thanks to people having default or
+simple passwords that could easily be broken with a dictionary
+attack.
+For gaining access, social engineering is also used, which
+involves the deception and manipulation of the target. In the
+case of Stuxnet, there was no way of accessing the nuclear
+facilities via the internet, as their networks were isolated.
+However, USB devices were used as intermediaries for getting
+the worm in the networks. This most likely involved
+dropping USB drives in or near the facilities which would then
+be picked up by workers and plugged into their computers,
+causing them to be infected with Stuxnet.
+Social engineering attacks can be defined as
+”the manipulation of user-computer inter-
+facing with the purpose to breach a computer system’s infor-
+mation security through user deception.” These attacks involve
+phishing, malvertisement, file or application masquerading,
+web pop-ups, and so on. Their goal is to deceive the user
+into thinking that what they are opening/downloading is legit.
+• Phishing - sending spam emails that trick victims into re-
+vealing sensitive information or downloading something.
+• File or application masquerading - a file or an application
+may appear safe but contain malicious code inside (e.g.
+PDF file masquerading).
+• Malvertisement - a malicious ad that people think is
+legitimate.
+• Search engine poisoning - manipulating a search engine
+in a way that shows the malicious website among top-
+ranked results.
+If access to the victim’s computer is gained, malware can
+be installed. Malware, defined as malicious software, includes
+many types of programs that once installed, can take over
+the control of the machine and track the victim’s actions, steal
+information, or do something else that will benefit the attacker.
+These include:
+• Ransomware - the malware that encrypts the files on the
+computer and returns them to the victim if a certain sum
+of money is paid.
+• Information stealers.
+• Key-loggers - track what keys the user presses on the
+keyboard and sends the data to the attacker.
+• Cryptominers - programs that use the victim’s computer’s
+computing power for mining cryptocurrencies for the
+attacker.
+Finally, to conceal malware, different methods are used.
+Rootkits can be installed to conceal the program from the
+operating system, or other ways can be used (e.g. changing
+the process name) for preventing the victim to find out
+about the attack.
+The compromised computers may also become a part of a
+botnet. A botnet is a network of infected computers that can be
+instructed to do something. Most commonly, botnets are used
+for launching DDoS attacks. A denial of service (DoS) attack
+is when many requests are sent to a web server. The server
+fails to process them in time, and as new requests come in, it is
+unable to respond, which results in people being unable to use
+the services provided by the server. A DoS attack originating
+from one IP address can be easily blocked by blocking the
+address. However, this doesn’t work for DDoS (Distributed
+DoS) attacks in which case the requests are coming in from
+many different IP addresses. That’s why botnets are perfect
+for launching DDoS attacks - it’s hard to tell for the server
+whether the bots have malicious intents or not.
+DDoS attacks coming from botnets can have a high impact.
+The attacks launched by the Mirai botnet were able to shut
+down Dyn (a DNS provider) and Valve Steam’s and Playsta-
+tion’s servers.
+Cyber attacks have some advantages and disadvantages
+compared to physical attacks. First of all, if the attacker
+seeks destruction and bloodshed, physical attacks will be
+more useful. For example,  attacks on critical
+infrastructures of the US will most likely not have as high
+casualties as weapons of mass destruction will have.
+However, cyber attacks offer many advantages:
+• Anonymity - during a physical attack, whether we are
+talking about theft or an airstrike, it is easy to find out
+the identity of the attacker. However, finding the author
+of a virus or an operator of a botnet can take a lot of
+time.
+• Less physical damage - sometimes the attacker’s goal is
+to gain profit or just financially damage the victim. For
+example, if Israel launched an airstrike on Iran, it would
+lead to the death of many innocent civilians.
+• Fewer costs - a cyber attack can cost way less than a
+physical attack. Again, in the case of Stuxnet, it would
+cost Israel more to launch an airstrike than it cost to make
+the worm.
+• Better scalability: viruses and worms can spread through
+tens of thousands of computers in a short period. For
+example, computers all around the world were infected
+with the WannaCry ransomware, originating from North
+Korea.
+
+Student2:
+Cyber attack is a broad term that covers many types of attacks
+like Malware attacks, phishing, password attack,
+Ransomware, DNS hijacking, Dos and DDoS attacks, and
+many more. Each attack aims to fulfill a specific task; for
+example, Dos or DdoS attacks are meant to shut down a
+machine or network, making it inaccessible to its intended
+users. While cybercriminals typically use a malware
+attack to extract data they can leverage over victims for
+financial gain. Phishing attacks are one of the most
+popular types of attacks where an attacker mimics to be a
+trusted person and sends fake emails that look typical to an
+original email. These emails usually have a link to redirect
+the victim to a fake website and enter their log-in credentials,
+which get stolen by the attacker. Another attack is called a
+Man-in-the-middle attack, also known as an eavesdropping
+attack, where an attacker intercepts a connection between two
+parties and can view the data sent between them that could be
+personal such as bank details or log-in credentials. Likewise,
+every attack is designed with a different purpose.
+Cyber attacks are not only restricted to software-related
+attacks or data theft. There are many types of cyber-physical
+attacks, such as Data Injection attacks, where a harmful code
+is injected into industrial control systems that cause the
+system to operate in a strange way that might result in
+physical damage, like the Stuxnet attack in 2010. If a
+physical attack is intended for monetary purposes, alternative
+cyber approaches reduce the risk of exposure to the public as
+much as physical theft. Moreover, victims of cyber attacks
+are much larger than a typical physical attack, making it more
+profitable to criminals. Furthermore, attackers can use
+numerous tools to mask themselves on the internet, making
+them harder to be identified. In addition, cyber-attacks are
+also used by nations in cyber war to obtain confidential
+information or attack organizations such as national nuclear
+power plants. Another advantage of cyber attacks over
+physical attacks is that attacks can target victims overseas,
+which makes it more convenient for criminals.
+
+Student3:
+With the rise of the IoT and crypto industries, the
+development of AI and machine learning, and frankly, the
+inescapable digitalization of every aspect of our lives, the digital
+world finds itself in a rather troubling situation. There are
+various cyber threats that pose threat to computer systems
+nowadays and it does not seem that their number is going to
+diminish. Cyber worms, botnets, rootkits and backdoors,
+different types of ransomwares, DDoS attacks, spam, and
+phishing (especially email phishing), trojans, backdoors, etc. –
+all the after-mentioned vulnerabilities pose a tremendous threat
+to computer systems. In our readings, we have extensively
+covered some infamous examples of such vulnerabilities: the
+Stuxnet cyber worm which was used to attack Nantanz nuclear
+facility in Iran, the Mirai botnet, which was utilized to
+primarily attack IoT devices in targeted regions worldwide,
+WannaCry and Petya ransomware (that used EternalBlue and
+DoublePulsar exploits) and infected hundreds of thousands of
+systems, and many others.
+Cybercriminals may utilize various means to attain their
+goals, the list of which is quite extensive. There can be numerous
+motivations behind cyber threats as they may be performed by
+various parties/individuals, such as governments, terrorists,
+hacktivists, etc. All of them have their proper objectives, the
+majority of which can belong to some of the common groups:
+curiosity (most applicable to individual script kiddies),
+vandalism, hacktivism, industrial espionage, extortion or fraud,
+and information warfare.
+Cyber-attacks are intended for those who prefer to act sleek
+and stealthy, and thus entities/individuals/governments
+oftentimes utilize those instead of straight-on physical attacks to
+act more discretely. The motivation to conduct an attack
+anonymously is also another factor to bear in mind. In the case
+of governments this enables them to perform the attack without
+bearing consequences (if its origin remains undetected) or it can
+enable them to avoid additional challenges related to
+international law. In the case of Stuxnet for instance, where there
+was presumably an immediate need for an intervention in Iran's
+growing nuclear program, the US and Israel both knew that
+military action would destabilize the region and incur
+consequences and retaliation from Iran and thus chose to employ
+digital means instead.
+However, some parties, terrorist groups, for instance, may
+employ classical methods of combat. Blowing something off or
+any other physical attacks do not require sophistication and
+computer skills in most cases. Furthermore, if the primary goal
+is to gain attention with an act of some sort, terrorist groups may
+still prefer to perform a physical attack simply because it is more
+demonstrative. A bombing or a terror attack would certainly
+attract much higher attention from both media and the general
+public than an infiltration into a network of critical
+infrastructure. Although, one may argue that if significant
+damage is caused, resulting in say a flood due to a malfunction
+in a dam’s control system or any other sort of disaster, this would
+certainly attract as much attention as in the latter case.
+Infrastructure that can be targeted includes electrical systems
+and blackouts; telecommunications services and internet/voice
+communication, etc. However, as the readings that we covered
+suggest, there has not yet been such a case, as in the majority of
+cases, an attacker cannot perform an attack of such complexity.
+The complexity of cyberattacks coupled with the low chance of
+a successful attack demotivates the terrorists. However, if an
+attack on critical infrastructure is successful it might as well
+attract as much attention as physical attacks.
+Scalability is another parameter that plays a vital role in any
+cyber-attack. To scale up a physical attack, would require
+bringing additional troops, and military equipment, which can
+be extremely troublesome in logistical terms, especially during
+a battle. Whereas in the case of cyber-attacks, one might argue
+that scalability is relatively simpler, as it implies the deployment
+of more computing resources, which can be done quicker than
+say shipment of additional equipment to the battlefield. This,
+however, does not imply it is easy in all terms.
+
+GPT 1:
+There are many different types of cyber threats that organizations and individuals may face. Some common types include:
+	•	Malware: software designed to harm or exploit a computer system, such as viruses, trojans, and ransomware.
+	•	Phishing: social engineering tactics used to trick people into giving away sensitive information, such as login credentials or financial information.
+	•	Distributed denial-of-service (DDoS) attacks: an attempt to make a website or network resource unavailable by overwhelming it with traffic from multiple sources.
+	•	Advanced persistent threats (APTs): a prolonged and targeted cyber attack in which an attacker establishes an unlawful, long-term presence on a network in order to steal sensitive data.
+Motivations behind cyber attacks can vary, but often include financial gain, espionage, or political motivations. For example, a cyber criminal may use malware to steal credit card information for financial gain, while a nation-state actor may use APT tactics for espionage. Additionally, physical attacks can be risky and difficult to execute, whereas cyber attacks can be launched from anywhere in the world, making it a popular choice for individuals or groups looking to cause disruption or steal sensitive information.
+
+GPT 2:
+The cyber-threat landscape is constantly evolving and can be broken down into several different categories. One of the most common types of cyber-threats is malware, which is software designed to harm or exploit a computer or network. This can include viruses, worms, and trojans, which can infect and spread through a system, causing damage or stealing sensitive information. Another common type of cyber-threat is phishing, which is a tactic used to trick individuals into providing personal information or login credentials.
+Another category of cyber-threats includes ransomware, which is a type of malware that encrypts a victim's files and demands a ransom payment to restore access. Advanced persistent threats (APTs) are another type of cyber-threat, which are typically used by state-sponsored actors or criminal groups to gain long-term access to a target's network and steal sensitive information.
+The motivation behind using cyber-attacks instead of physical attacks can vary depending on the attacker's goals. Some attackers may be motivated by financial gain, such as stealing sensitive information that can be sold on the black market or extorting a ransom payment. Others may be motivated by political or ideological goals, such as attempting to disrupt critical infrastructure or steal sensitive government or military information. Cyber-attacks can also be used to disrupt business operations or damage a company's reputation. Additionally, cyber-attacks can be launched from anywhere in the world, making them a low-risk, high-reward option for attackers.
+
+
+GPT 3:
+The cyber-threat landscape is constantly evolving, but some common types of threats include malware, phishing, ransomware, and distributed denial of service (DDoS) attacks. Malware refers to malicious software that can infect a computer or device and allow an attacker to gain access to sensitive information or disrupt operations. Phishing refers to attempts to trick individuals into providing sensitive information, such as passwords or credit card numbers, through fraudulent email or website. Ransomware is a type of malware that encrypts a victim's files and demands payment in exchange for the decryption key. DDoS attacks involve overwhelming a website or network with traffic to disrupt service.
+The motivation behind using cyber-attacks instead of physical attacks is often the ability to carry out an attack remotely and with a lower risk of being caught. Cyber-attacks can also be more cost-effective and have a greater potential impact than physical attacks. Additionally, many organizations and individuals have valuable information stored electronically, making it a more attractive target for cybercriminals. Additionally, it is also a way for hackers to disrupt services of a company or government without having a physical presence in the location.
+
+Question 6: Please choose one contemporary cyber-threat and describe, in a few paragraphs, the following: The motivation behind using this cyber-threat, the delivery method, how the cyber-threat works, results of the cyber-threat, discuss historical data describing the number of infected devices (victims) over time (annually), also describing what sources did you use to find the information, whether there has there been an increase or decrease, and why. For the previous chosen threat, discuss historical data quantifying the cost of the cyber-threat over time (annually) – if no data is available show how you estimate the cost. Is the cost increasing or decreasing? Why? What are the deployed solutions against the cyber-threat? Give 2 examples of the cyber-threat.
+
+Student1:
+Encrypting ransomware attacks are some of the most
+widespread cyber attacks.
+There are many ways of delivering ransomware to the
+victims’ computers. Most of the delivery methods described in
+the first section can be used: worms can be used for installing
+ransomware; semantic attacks can be used for tricking the
+victim into downloading the ransomware by themselves; the
+program can also be delivered physically, with a USB drive,
+for example.
+After installation, the ransomware program encrypts certain
+types of files. The files essential for the computer’s operation
+are avoided. Some of the most frequently encrypted files
+include PDF, Word, PowerPoint, and TXT files. Mostly, these
+files have huge importance for the victims, and the only way
+for them to get the files back is to pay the ransom. Because the
+files are encrypted and the attacker is the only one who knows
+the key, there is no other way around it. Bitcoin is mostly used
+as a payment method for ransom because of its anonymity. To
+further protect their anonymity, the attackers mostly use many
+bitcoin addresses.
+Ransomware attacks can have different outcomes:
+• The victim decides to give up the data and doesn’t pay
+the ransom.
+• The victim pays the ransom. In this case, the users can
+recover their data but not fully.
+• If the victim is a company and doesn’t pay the ransom,
+the attackers may release its data to the public.
+Ransomware attacks can have a huge impact on companies.
+The ransom they have to pay to recover their data can range
+from hundreds of thousands to millions of dollars. Other
+than that, because of the lost data, their operations are delayed
+which also can cost them money.
+Using ransomware is quite attractive to cyber criminals
+because of several reasons:
+• Easily spread just like most other malware - there are
+many ways of delivering ransomware.
+• Can be automated - after infection, the attackers don’t
+have to do much.
+• Preservation of anonymity - technologies such as Bitcoin
+allow attackers to receive money without being discov-
+ered.
+• High monetary gain - companies are willing to pay huge
+sums of money to get their data back
+
+Using data provided by SonicWall Capture Labs in
+the ”2022 SonicWall Cyber Threat Report”, we see
+a massive surge in 2021. One of the explanations
+for this is the fact that as many organizations switched to re-
+mote work because of the pandemic, their security decreased.
+However, ransomware attacks have decreased in 2022. One
+of the reasons for this is the massive fall in the prices of
+cryptocurrencies. Another explanation offered by the report connects
+this fact to the war in Ukraine. One of the
+major sources of ransomware attacks is Russia. Because of
+this, as Russia started the war, it shifted its whole focus to
+Ukraine, which resulted in fewer attacks. Also, because of
+the sanctions by many countries, Russian cybercriminals faced
+difficulty gathering means for the attacks.
+The decrease in the number of ransomware attacks doesn’t
+mean that it will be going away. Ransomware attacks are a
+great way for cybercriminals to get monetary gain, and the
+attacks will probably increase once more as the war ends
+and/or cryptocurrencies become more stable.
+
+Average cost of remediation from
+ransomware attacks data is gathered from the surveys
+conducted by Sophos in the years 2019-2022. One strange
+thing here is that the average cost of remediation decreases
+from 2020 to 2021. However, this doesn’t mean that the total
+costs decrease. Because the number of attacks in 2021 was
+much more than in 2020, the total cost will be more in 2021.
+However, the reason for the decrease in the average cost of
+remediation, is that the companies have
+learned more about recovering from data losses. Still, we can
+see that the financial losses are tremendous.
+From the victim’s side, nothing can be done to counter the
+ransomware if it already has encrypted the files. Because of
+this, countermeasures against ransomware have to be taken
+before it is installed. The main way to do this is to make sure
+that the ransomware cannot be delivered to the computer. To
+protect against the use of exploits by the attacker, the operating
+system and all third-party software have to be frequently
+updated. To protect against semantic attacks, the users have
+to be educated. Also, malware detection software can be used
+for detecting ransomware. However, this also has to be chosen
+carefully, as many anti-virus applications can be malicious
+themselves. For ransomware specifically, another solution is to
+back up all the important data so that it can be easily restored
+if it is lost.
+One of the most known ransomware is the WannaCry worm.
+It targeted Windows machines and used the EternalBlue ex-
+ploit for propagation. Although Windows had released patches
+for that vulnerability, WannaCry was still able to spread
+because many people didn’t update their operating systems.
+WannaCry started attacks in May 2017 and accepted pay-
+ments in Bitcoin. The author of the ransomware is considered
+to be the North Korean government.
+Another interesting case is the TeslaCrypt ransomware. Its
+attacks started in 2015 and were originally targeting gamers
+(”saved games, user profiles, replays of some popular games
+like League of Legends, Call of Duty or Minecraft”).
+However, TeslaCrypt later got developed into full-fledged
+ransomware that encrypted other types of files as well. The
+ransom message was displayed on the desktop, and the victims
+were given a chance to decrypt one file to trust that their
+files would be returned if they paid the ransom. In
+2016, however, the developers released the master key, making
+TeslaCrypt ineffective.
+
+Student2:
+A. Motivation behind DDOS Attacks
+DDoS (Distributed Denial of Service) attacks are used by
+attackers for many reasons like:
+
+Financial gain or economic benefit: Hackers use
+DDoS attacks as financial weapons, demanding
+Bitcoin through email to stop the attack.
+
+Revenge: DDoS attacks on organizations or
+individuals where the dissatisfied individual or
+organization behind the attack usually intends to
+inflict harm in retaliation for a perceived violation.
+
+
+Ideological belief: hacktivist groups like anonymous
+attack political targets for ideological reasons, such
+as opposition to a nation-state or government
+policies, or they do not accept their ethics or do not
+perceive their actions as ethical.
+
+B. Delievery mothod / How DDOS attacks work
+DDoS attacks occur in three stages:
+
+In the first phase, Hackers get access to network-
+connected computers. Hackers scan the internet for
+computers or Internet of Things devices that can be
+compromised using an automated process.
+
+The second phase starts when sufficient numbers of
+computers are compromised, and these machines are
+called Botnets. Instructions are then sent to these
+botnets to launch an attack on a specific network or
+organization.
+
+Finally, Hackers direct the army of botnets to attack
+a virtual machine that causes the machine to slow
+down or may even crash the server. As these attacks
+are distributed from many locations, the victim’s
+system cannot identify where the attack is initiated
+and cannot block the incoming traffic. Moreover, IP
+addresses of compromised devices sending requests
+to the server can be spoofed, which prevents the
+victim from filtering malicious traffic to find the
+attack source.
+
+DDoS attacks in general are classified into 3 main categories:
+volumetric attack, protocol attack, and resource layer attack.
+
+Volumetric attacks are the most common form of
+DDoS attacks where the network layer is
+overwhelmed with service requests that may appear
+legitimate. DNS amplification is an example of a
+volumetric attack where the attacker exploits
+vulnerabilities in Domain naming system servers to
+amplify small requests to much larger payloads,
+which brings down the victim’s servers.
+
+By exploiting vulnerabilities in the layer three and
+layer four protocol stack, a protocol attack causes a
+service disruption. SYN flood is a good example
+where an attacker initiates many connections to the
+server without finalizing them, and the server has to
+spend much of its resources waiting for unfinalized
+open connections to be finalized which causes the
+server to be unresponsive to legitimate attacks
+
+A resource layer attack interrupts data transmission
+between hosts by targeting web application packets.
+Examples of such attacks include SQL injection and
+layer seven attacks.
+
+C. Impact of the DDoS on victims
+In a DDoS attack, many requests are sent to a server
+overwhelmingly, forcing that site or resource to go offline
+or reject legitimate requests. Attacks usually target
+businesses, and in the event of a successful attack,
+businesses are affected in many ways, including making
+network resources inaccessible to employees of the
+organization, which leads to downtime that prevents
+customers from receiving required assistance as they are
+unable to reach specialized professionals. Moreover, if a
+web server hosts an e-commerce site, no customer would
+be able to make purchases, costing the business valuable
+clients and significantly impacting the business’s
+reputation. A study by Kaspersky Lab showed that one in
+five attacks could last for days or weeks. This shows how
+big a threat DDoS attacks can be to businesses, as they
+can lose up to $20,000 per hour.
+
+D. DDoS attacks over time
+According to Cisco in a white paper released as part of the
+company’s more extensive report, “Visual Networking Index
+Complete Forecast Update, 2015-2020.” The frequency
+of DDoS attacks has increased over 2.5 times in the last 3
+years (2017 – 2020) where the average size of each attack is
+at a constant increase and approaching 1 Gbps; however, this
+is outdated as recent research shows that the average attack
+in the 3rd quarter of 2021 used 4.31Gbps of data which is
+enough to bring down most small to medium-sized websites.
+However, this number is much lower than the Q1 2021 metric
+of 9.15 Gbps. However, nothing compared to the most
+prominent attack launched by the Mirai botnet variant that
+peaked at 2.5 Tbps (terabytes per second) according to
+Cloudflare, which described it as the most significant attack
+in terms of bitrate.
+DDoS attacks have been increasing exponentially over the
+past few years, and especially during the pandemic that
+everyone online in Q2 2022, a significant and long-lasting
+spike was witnessed in the number of attacks. Since we are
+still using the internet at the same capacity, the net number of
+attacks is expected to keep increasing.
+
+Cisco predicts that in 2023 the number the total number
+of DDoS attacks will cross 15 million. DDoS attacks are
+not just increasing alone, malicious actors are creating an
+even bigger army of botnets, increasing the scale of DDoS
+attacks. Attacks of 1 Gbps can knock down an
+organization’s servers, but now attacks can reach up to
+1Tbps generated by millions of infected devices.
+As attacks are generated more often with a massive
+increase in size, Business losses are increasing
+exponentially. Furthermore, since IT services downtime
+costs organizations between $300,000 to over $1,000,000
+per hour, you can see the impact caused by an attack even
+for a short period. Since there are ineffective solutions to
+eliminate DDoS attacks, we do not expect to see a decline
+in the number of attacks soon.
+
+E. How to prevent a DDoS attack:
+One of the most effective ways to reduce the chances of
+getting attacked is by creating a Denial of Service
+Response Plan. This would take some time to plan as it
+depends on the complexity of the organizational
+infrastructure. Another method is by using firewalls;
+however, as some attacks target firewalls, it is suggested
+to put data centers on multiple networks that are not in the
+same geographical region and install servers in different
+data centers and ensure there is no place where traffic
+bottlenecks in the network. DDoS attacks are not new to
+the cyber world, and many widespread DDoS attacks are
+similar. Using anti-DDoS software or hardware would
+help prevent these common types of attacks increasing the
+network’s security. Another way is by knowing your
+network’s traffic. For example, if an organization
+provides services only for a particular region or country,
+significant traffic is not expected from other countries.
+Hence if an attack is made from a different country, it
+would be easily identified and blocked immediately
+instead of overwhelming the server and rejecting
+legitimate requests .
+
+F. Example of DDoS attacks
+The Mirai Botnet: Mirai malware first scanned IP
+addresses of devices connected to the internet and
+identified IoT devices that run a version of Linux called
+ARC. The malware exploits its security vulnerabilities to
+gain network access using default passwords. If the
+owner/user has not changed the default password, this
+intelligent device is added to the list of botnets on
+standby, waiting for an order to flood a target with
+requests. Over 600,000 devices were infected with Mirai,
+which was used to attack the DNS provider and registrar
+DYN on October 2016.
+
+The GitHub attack in 2018: This attack is particularly
+effective as it uses an amplification factor where the ratio of
+the attacker request size to the amount of traffic generated is
+up to 51,200 times! Even though GitHub is prepared for
+DDoS attacks, its defences were overwhelmed by the
+enormous amount of traffic caused by the amplification .
+GitHub explained in the company’s incident report: “Over the
+past year, we have deployed additional transit to our facilities.
+We have more than doubled our transit capacity during that
+time, which has allowed us to withstand certain volumetric
+attacks without impact to users … Even still, attacks like this
+sometimes require the help of partners with larger transit
+networks to provide blocking and filtering”.
+
+Student3:
+DDOS BOTNETS
+Distributed Denial-of-Service (DDoS) attacks are one of the
+most common types of cyber-attacks. The first quarter of 2022
+broke all records in terms of DDoS attacks (hitting more than
+90,000 attacks, for reference, only 20,000 attacks were
+conducted during the same quarter the year prior), and they
+accounted for approximately 59% of all the attacks in 2022
+according to the Application Protection Report by F5 Labs.
+In addition, the strength and size of attacks are steadily
+increasing according to the same report. DDoS attacks
+undoubtedly present a serious concern to overall web security.
+Having those reasons in mind, DDoS attacks were chosen as the
+subject of our further discussion.
+
+A botnet is essentially a group of computers infected with
+malware that performs commands given by an attacker.
+Attackers that employ a such type of cyber threat can have a
+specific target in mind, in which case they would direct all the
+power towards an individual target, or, as in the case of one of
+the biggest DDoS attacks ever recorded - Mirai, the attack can
+be dispersed, tackling thousands of devices. Employing such a
+“shotgun” sort of approach, it managed to infect more than
+600,000 devices, the majority of which were IoT devices, setting
+a record at the time. The major goals of the attackers utilizing
+botnets include stealing data, sending spam, or undermining
+their competitors, etc. Another prominent DDoS attack was
+performed in Q1 of 2020 on Amazon Web Services (AWS)
+servers. Amazon claimed about the attack in its AWS Shield
+Threat Landscape report. A month before that, another
+attack of 1.3 Tbps hit Github. Judging from the frequency
+of DDoS attacks, we can certainly say that they represent a major
+threat in cyberspace nowadays.
+
+DDoS botnet attacks are essentially performed using a
+network of bots i.e. computers, servers, IoT devices, and any
+other devices that are infected with malicious software (exploit)
+and are remotely controlled by an attacker. To accumulate
+the network of bots, firstly, one must spread the exploit to
+devices. Delivery of the exploit can happen physically (by
+injecting an infected USB drive and connecting the destination
+system manually by a cable) as well as remotely. The protocols
+used by DDoS exploits include FTP, POP3, TCP&UDP.
+Botnet sends an enormous flow of traffic to a specific
+destination (a server) using all of the accumulated computing
+power, creating congestion for the traffic from ordinary web
+users trying to access the site. The strength of a DDoS
+attack is measured in Tbps (Terabytes per second), i.e., in terms
+of the amount of data it transmits to the server in a unit of time.
+In the Layer7 type of attack, the strength of a DDoS attack
+depends on the size of the pool of IP addresses and on the power
+of the servers/devices the attack is being conducted from. In the
+Layer4 type of attack, the power can be adjusted when it is
+initiated. There is a certain threshold of traffic that can be
+sustained by a server and thus, a DDoS attack exceeds that limit
+and disrupts the network. An end user trying to access a website
+that is under a DDoS attack will experience either a slower
+response time for the website in question or its complete outage.
+After extensive penetration, the target system would stop
+responding and invoke the denial-of-service to the incoming
+traffic, and the server will halt.
+
+DDoS attacks incur enormous financial losses for business
+owners whose websites are attacked, as they lose revenue while
+their websites are down. The competitors of the businesses in
+question can benefit from such a disruption in the short run as
+the customers who were willing to purchase products or services
+from the business entity will now turn to other firms to find
+suitable substitutes. Many firms in fact oftentimes utilize
+services provided by DDoS hackers.
+
+Businesses may also incur losses in reputation due to the
+DDoS attack which in turn might affect them in the long run.
+DDoS attacks might undermine the national security of targeted
+countries if the attack is performed on a government’s websites
+or communication means. This was also briefly mentioned in
+one of our readings (DDoS attacks on Estonia and Georgia).
+The statistics regarding the DDoS attacks over the time
+period from Q4 2020 until Q2 2022 are presented in Figure 1
+(Such a time period was chosen due to insufficient data provided
+in the reports for the earlier years). The data was taken from
+Kaspersky’s Securelist which was compiled using Kaspersky’s
+proprietary DDoS Intelligence system. While we can clearly see
+the upwardly increasing trend in DDoS detections (up until Q1
+2022), we have to bear in mind that the following graph was
+solely based on the data from the after-mentioned source, and it
+does not represent the entire picture of DDoS detections
+worldwide, even though Kaspersky is a reliable source in the
+cyber security world. The reports used even mention that DDoS
+Intelligence statistics only consider the botnets detected by
+Kaspersky and do not include all the DDoS attacks that took
+place within a given time period.
+
+As seen from the Kaspersky DDoS Intelligence system,
+there has been an upward trend in
+DDoS attacks up until Q1 of 2022 when it peaks. There were
+about 14% fewer detections observed in Q2 2022 than in the
+previous quarter, however, as the report presented by Kaspersky
+suggests, the overall situation might actually have worsened as
+the quality of the attacks performed is getting increasingly
+complex in comparison with previous years. Furthermore, the
+report mentions that botnet activity grew and links the increase
+in DDoS activity with the decline in the crypto industry as this
+commonly boosted DDoS attacks in previous years.
+
+Other data acquired from Cisco Annual Internet Report suggest
+the trend presented in DDoS attacks over the period of 2018-2023.
+In general, DDoS attacks are still
+on the rise, and it seems that they will continue to do so.
+In terms of solutions that one might utilize in order to prevent
+or ward off an incoming DDoS attack, there are so-called DIY
+measures such as manually blacklisting specific IPs, but those
+are not that effective and oftentimes are utilized measures after
+an attack had been conducted. More advanced approaches can
+include utilizing specialized hardware that can filter traffic, this
+however incurs huge costs for the host and sometimes is not
+available to certain hosts. Another option is using cloud-
+based/ISP-provided solutions, which are more beneficial than
+the latter, as they facilitate scalability, which is usually a major
+issue in the case of hardware solutions. In addition, they are
+relatively cheaper in comparison to hardware solutions.
+
+If we were to think about the cost of DDoS attacks, it would
+be logical to assume that the average cost of an attack should
+increase as its complexity and the level of sophistication
+required to bypass the security of a given system. But the price,
+however, has dropped significantly over recent years due to a
+huge supply of DDoS attackers offering their services to firms
+and individuals. Unfortunately, we were not able to find factual
+information about the prices of DDoS attacks over the years.
+
+GPT 1:
+The contemporary cyber-threat I have chosen is Ransomware.
+The motivation behind using Ransomware is to extort money from victims by encrypting their data and demanding payment in exchange for the decryption key. The delivery method is typically through phishing emails or malicious software downloads.
+Once the ransomware is downloaded, it encrypts the victim's files and demands payment in the form of cryptocurrency in exchange for the decryption key. The results of a ransomware attack can range from minimal to severe, depending on the amount of data encrypted and the importance of the data to the victim. In some cases, victims may choose to pay the ransom to regain access to their data, while in others, they may choose to restore their data from backups or use decryption tools.
+According to data from the Cyber Threat Alliance, the number of ransomware attacks has been steadily increasing over the past several years, with a significant spike in 2016 and 2017. In 2016, there were approximately 4,000 reported ransomware attacks per day, and in 2017, that number had risen to 6,000 per day. The sources used for this information include the Cyber Threat Alliance, the FBI, and cybersecurity companies such as Symantec and McAfee.
+The cost of ransomware attacks has also been increasing over time. According to a report by Cybersecurity Ventures, the cost of ransomware attacks is expected to reach $11.5 billion in 2019. This is an increase from the estimated cost of $325 million in 2015. The cost increase can be attributed to the rising number of attacks and the increasing sophistication of the ransomware being used.
+Solutions against ransomware include implementing robust backups, educating employees on identifying and avoiding phishing emails, and implementing endpoint protection software. Two examples of ransomware are WannaCry and Petya. WannaCry was responsible for a global ransomware attack in May 2017, affecting more than 200,000 victims in 150 countries. Petya was a ransomware attack that affected several high-profile companies in June 2017, including Ukraine's international airport and metro system, as well as Danish shipping giant Maersk.
+GPT 2:
+The contemporary cyber-threat chosen is Ransomware.
+Ransomware is a type of malware that encrypts a victim's files and demands payment, usually in the form of cryptocurrency, in exchange for the decryption key. The motivation behind using ransomware is financial gain for the attackers.
+The delivery method for ransomware can vary, but common methods include phishing emails, exploit kits, and drive-by downloads.
+Once the ransomware has been delivered and executed, it will encrypt the victim's files and display a ransom note, usually with instructions on how to pay the ransom. The victim is then given a deadline to pay the ransom before the decryption key is deleted, making the files permanently inaccessible.
+According to data from the FBI's Internet Crime Complaint Center, there were 4,086 reported ransomware attacks in 2019, causing a total loss of $11.5 million. This represents a significant increase from 2018, when there were 2,573 reported attacks resulting in a loss of $3.6 million.
+In terms of cost, it can be difficult to estimate the exact cost of ransomware attacks as not all victims report the attacks or disclose the amount paid in ransom. However, according to a report by Cybersecurity Ventures, the cost of ransomware is expected to exceed $11.5 billion annually by 2021.
+To combat ransomware, solutions such as backup and disaster recovery, endpoint protection, and employee education and training can be deployed. Two examples of ransomware are WannaCry and Petya. WannaCry was a global ransomware attack that affected over 200,000 victims in 150 countries in May 2017. Petya is a ransomware attack that encrypts the master boot record of the victim's computer, rendering it inoperable.
+
+GPT 3:
+One contemporary cyber-threat that has been prevalent in recent years is Ransomware. Ransomware is a type of malware that encrypts a victim's files and demands payment in exchange for the decryption key.
+The motivation behind using Ransomware is to make money. Attackers often target businesses and organizations as they are more likely to pay the ransom to regain access to their important data. The delivery method for Ransomware can vary, but it is often delivered through phishing emails or through vulnerabilities in software.
+Once the Ransomware is on a device, it encrypts the victim's files and displays a message demanding payment in exchange for the decryption key. The results of a Ransomware attack can be devastating for a business or organization as they may lose access to important data and may have to pay the ransom to regain access.
+According to data from the Cyber Threat Alliance, there has been a steady increase in the number of Ransomware attacks over the past few years. In 2016, there were around 4,000 Ransomware attacks per quarter, which increased to around 6,000 attacks per quarter in 2017. This data was sourced from the Cyber Threat Alliance's Ransomware Intelligence Report.
+The cost of Ransomware attacks can vary depending on the size of the organization and the amount of data that has been encrypted. According to a report from Cybersecurity Ventures, the cost of Ransomware attacks is projected to reach $11.5 billion by 2019. This cost includes the ransom payments, as well as the cost of recovering from the attack.
+Solutions against Ransomware include implementing regular backups, keeping software up to date, and educating employees about the dangers of phishing emails. Two examples of Ransomware include WannaCry and Petya. WannaCry was a global Ransomware attack that affected over 200,000 devices in 150 countries in 2017. Petya was another Ransomware attack that affected businesses and organizations worldwide in 2017.
+
+Question 7: This is a hypothetical discussion about the future of the cyber-threat landscape. Please answer, in a few paragraphs, whether cyber-attacks are more or less dangerous than physical attacks and how? Use empirical data to support your answer. Do you think that the solutions available are effective in protecting the cyber-world from these attacks? Describe a scenario showing how these cyber-threats can be used in cyber warfare? Guesstimate, using data available, the timeframe a cyberwar is likely to happen within?
+
+Student1:
+Comparing physical and cyber-attacks in terms of how dan-
+gerous they are is quite tricky, as the word ”dangerous” in this
+context is vague. It is easy to estimate the immediate damage
+of physical attacks, but cyber attacks are different - their
+consequences may last for a long time and have an indirect
+effect on many circumstances. During the Second World War,
+the cities of Hiroshima and Nagasaki were nuked, causing
+roughly 110,000 immediate deaths and many more afterward.
+Of course, there has been no precedent of a cyber attack
+causing so much death and destruction. In the same war, Alan
+Turing was able to crack the Germans’ encryption system. This
+played a role in the US’s victory in WW2 because it gave the
+US many advantages when it entered the war. However, it’s
+not possible to quantify how much damage this knowledge
+caused to Germans. Today, if other countries tried to attack
+USA’s critical infrastructures, they would most likely not be
+able to cause much damage (compared to mass destruction
+weapons). Still, although there’s no precedent of a cyber
+attack causing mass destruction, we cannot say that such a
+thing is impossible. Literature highlights that countries
+are planting cyber weapons in their enemies’ territories so that
+they can activate them in case of conflict. Because of this,
+destructive cyber weapons might exist that we do not know
+of yet. For example, Stuxnet was able to negatively affect the
+production of nuclear energy in Iran, but there might be a
+possibility of a similar worm being able to cause an incident
+like Chornobyl.
+However, if we compare physical and cyber attacks outside
+physical warfare, we can say that cyber attacks are more
+dangerous. Cyber attacks can be used politically, for example,
+launching a DDoS attack and shutting down websites that
+promote different political opinions. As we saw in the previous
+section, a cyber attack may cost a company millions of dollars
+of damage. With devices/computers/networks, we cannot say
+that 100% security has been achieved. There always will be
+ways for attackers to find vulnerabilities.
+The main solutions against spreading malware include user
+education and regularly updating software. However, there
+will probably always be vulnerabilities in software - zero-day
+exploits - that we can do nothing about until it gets fixed. Also,
+there will always be lazy people that do not make enough effort
+for security.
+As we discussed, physical and cyber-attacks have advan-
+tages and disadvantages against each other in different aspects.
+Because of this, during actual warfare, a combination of both
+is used. For example, when Russia invaded Georgia in 2008,
+it also launched DDoS attacks on the Georgian government’s
+websites and independent media to make it harder for the
+government to communicate with the people. Estonia’s
+national networks were similarly attacked by Russia in 2007.
+Cyber attacks can also be used for gathering valuable
+information about enemies during warfare. Alan Turing’s
+cracking of the German cipher can be considered one such
+case.
+Thus, we can see that the most dangerous attack is the one
+that combines a physical and a cyber one.
+
+Student2:
+A. Are cyber-attacks more or less dangerous than
+physical attacks and how?
+Cyber threats are much more dangerous than ever, and
+attacks can now cause electrical blackouts, military
+equipment failure, or even breaches of national secrets.
+Cyber-attacks, with their frequency today, create a
+huge concern; cybercrime rates are off the charts and
+increasing exponentially. According to the FBI’s annual
+look at phishing, scam, and personal data breach, US
+victims lost more than $6.9 Billion to internet-Enabled
+Crimes only in 2021. Stealing confidential data could
+result in serious harm to individuals and nations as a
+whole. Common data breaches can steal sensitive data like
+medical records—bank account credentials, passwords,
+addresses, or emails that put victims at risk of identity
+theft. According to FTC (Federal Trade Commission), the
+number of consumer identity theft complaints in the US
+increased to just over 1.43 million in 2021 compared to
+1.39 million complaints in 2020 with credit card fraud is
+the second most common form of identity theft with
+390,000 complains after Government documents or
+benefits fraud with around 400,000 complains.
+Cyber-attacks also cause property damage. For example,
+in 2008, a massive oil pipeline explosion in Refahiye,
+Turkey, is believed to be caused by a cyber-attack.
+Another similar case occurred in 2021 when the US
+Colonial Pipeline experienced a ransomware attack that
+caused it to shut down for several days, causing many
+petrol stations and commercial airlines to experience fuel
+shortages.
+In 2010 Iran witnessed a one-of-a-kind worm called the
+Stuxnet. This worm had four zero-day vulnerabilities
+configured to attack a specific Siemens device,
+specifically the Siemens S7 programmable logic
+controller. This device was used in the Iranian nuclear
+plant and caused the devices to malfunction and work
+abnormally, which severely crippled Iran’s nuclear
+program. To date, no one is sure which country created this
+worm, which shows the anonymity of cyber attacks. These
+are just a couple of the attacks that show the power of
+cyber weapons.
+B. Are solutions available effective in protecting the
+cyber-world from these attacks?
+Cyber security is critical today and plays a major role in
+keeping countries safe. However, no matter how high the
+level of security is, there will always be vulnerabilities that
+have not been exploited yet. There are many tools created
+to protect users against various “Known” types of worms.
+However, it is impossible to achieve 100% security as new
+vulnerabilities
+are
+discovered
+daily,
+inspiring
+cybercriminals to develop malware that exploits these
+vulnerabilities. On the other hand, firewalls and other
+discussed tools can be used to reduce the impact of an
+attack. Moreover, small businesses can depend on other
+specialist organizations like GitHub to defend their
+systems against attacks.
+C. How cyber-threats can be used in cyber warfare
+Many cyber weapons could be used to attack nations, and
+if effectively combined, they might have an effect more
+remarkable than a nuclear weapon. There are seven types
+of cyber warfare attacks: Espionage, Sabotage, DoS attack,
+Electrical power grid attack, Propaganda attack, Economic
+disruption, and surprise attacks. Espionage refers to
+tracking countries to obtain their secrets. This can involve
+spear phishing attacks to compromise the target’s system
+before extracting the information.
+Countries can combine attacks for a more significant
+effect; for example, a country can use espionage to obtain
+information about the transportation control system and
+via insider attack, they can cause accidents between trains
+or disable train signals causing pedestrians to falsely think
+that it is safe to pass the train trail. Countries can also
+launch attacks on nuclear facilities of other countries that
+may be life threatening.
+
+Student3:
+Whilst considering which type of attacks cause more
+damage, physical or cyber, I believe that the main factor of
+consideration should be the ease of access. While it might be
+troublesome for an attacker to surpass certain security measures,
+however, if he/she does not need to be physically at the site of
+the attack to conduct it, and the access can be gained remotely,
+then this presents a huge advantage for him/her. Of course, this
+is not applicable to all the attacks, since some of them would
+require some physical steps as in the case of Stuxnet where there
+was a need to overcome the “air gap” between the nuclear
+facility and the rest of the world, but if there a possibility to
+conduct an attack fully remotely, then the attacker has a relative
+advantage as there is no distance between him and his target.
+There have been numerous instances of relatively
+destructive cyber-attacks in the past: Stuxnet, which attacked the
+Iranian Natanz Nuclear Facility, Wiper malware that was used
+to erase hard drives of Iranian Oil Companies, Shamoon virus
+that was used to tackle Saudi Aramco and Qatar’s RasGas oil
+companies, etc. Those attacks were orchestrated with direct
+objectives to either destroy or damage specific data or objects
+and the level of sophistication and damages produced by such
+attacks are only going to increase in future. It would have been
+significantly harder to tackle all those targets by solely physical
+means since scalability would be an issue in some of the
+mentioned attacks. For instance, it would have been close to
+impossible to physically breach the security in all 30,000 Saudi
+Aramco gas stations and erase and overwrite the hard drives in
+each and every one of them, and the same applies to Wiper too.
+We do think that the existing solutions are doing a great job
+of protecting the systems in the current context, given the
+existing threats. However, as the share of the IoT industry in our
+world increases and its integration into our daily lives (smart
+fridges, kettles, climate control systems, HVAC, heating and
+water systems) so does the probability of greater and more
+severe breaches in security to occur, which can potentially bring
+devastating consequences. For instance, if somebody gains
+access to the heating system of a house, he/she might potentially
+set it on fire if the wrong settings are applied. To combat this,
+manufacturers would need to employ even better security
+practices, and enhance testing and research, and development in
+the after-mentioned areas.
+
+
+GPT 1:
+It is difficult to compare the danger of cyber-attacks versus physical attacks as they both have unique risks and impacts. However, it is clear that cyber-attacks are becoming increasingly prevalent and dangerous. According to data from the Cyber Threat Alliance, the number of cyber-attacks has been steadily increasing over the past few years, with a significant increase in the number of ransomware attacks. In addition, the cost of cyber-attacks is also on the rise, with a projected cost of $11.5 billion by 2019, according to a report from Cybersecurity Ventures.
+The solutions available for protecting the cyber-world from these attacks are effective to some extent, but they are not foolproof. Regular backups, keeping software up to date, and educating employees about the dangers of phishing emails are some examples of solutions that can help protect against cyber-attacks. However, attackers are constantly finding new ways to bypass these solutions, making it difficult to fully protect against cyber-attacks.
+In terms of cyber warfare, a scenario could involve a nation-state launching a cyber-attack on another nation's critical infrastructure, such as power plants or transportation systems. This could cause widespread disruption and potentially even loss of life. Additionally, it could also be used to steal sensitive information, disrupt communication systems and damage national security.
+The timeframe for a cyberwar is difficult to predict as it depends on many factors such as the development of new technologies and the political tensions between nations. However, as the number of cyber-attacks is increasing, it is likely that a cyberwar will happen within the next decade. It is important for governments and organizations to be prepared and take proactive measures to prevent and mitigate the effects of cyberwarfare.
+
+
+GPT 2:
+It is difficult to compare the danger of cyber-attacks to physical attacks as they both have unique risks and consequences. However, it can be argued that cyber-attacks have the potential to be more dangerous than physical attacks as they can cause widespread disruption and damage to critical infrastructure and systems.
+According to a report by the Center for Strategic and International Studies, the global cost of cybercrime is estimated to be around $600 billion annually. This includes costs such as lost productivity, intellectual property theft, and damage to reputation. Additionally, the number of cyber-attacks has been increasing over the years. A report by Cybersecurity Ventures predicts that there will be a cyber-attack every 11 seconds by 2021.
+In contrast, physical attacks are generally limited in scope and have a more direct impact on individuals or specific locations. However, it is important to note that physical attacks can have a significant impact on society as well, such as the 9/11 terrorist attacks in the United States.
+Currently, solutions available for protecting the cyber-world from cyber-attacks include firewalls, antivirus software, and intrusion detection systems. While these solutions can be effective in protecting against some types of cyber-attacks, they are not foolproof and can be bypassed by skilled attackers. Additionally, as technology continues to advance and new vulnerabilities are discovered, cyber-attacks become more sophisticated and harder to defend against.
+In terms of cyber warfare, a scenario could involve a nation-state using cyber-attacks to disrupt the infrastructure of another country. For example, they could target power plants, transportation systems, and communication networks in an attempt to cripple the country's ability to function. Additionally, they could use cyber-attacks to steal sensitive information or disrupt military operations.
+It is difficult to estimate a specific timeframe for when a cyberwar may happen, but it is likely that we will see an increase in cyber-attacks used as a tool of warfare in the future. According to a report by the Center for Strategic and International Studies, there have already been instances of cyber-attacks being used in conflicts between nations. As technology continues to advance, the likelihood of a cyberwar happening in the near future increases.
+
+
+GPT 3:
+Whether cyber-attacks are more or less dangerous than physical attacks is a matter of perspective. On one hand, physical attacks can cause immediate harm to individuals, whereas cyber-attacks can have more long-term consequences. For example, a physical attack on a building can cause immediate damage and injury, while a cyber-attack on a company's network can result in the loss of sensitive data and financial loss.
+However, cyber-attacks can also have immediate consequences. For example, a cyber-attack on a hospital's network can disrupt the delivery of critical care, potentially causing harm to patients. Additionally, cyber-attacks can have a much wider reach than physical attacks, as they can target victims across the globe.
+According to data from the Cybersecurity Ventures, cybercrime is projected to cost the world $6 trillion annually by 2021. This includes the cost of data breaches, cyber espionage, and disruptions to critical infrastructure.
+The solutions available for protecting the cyber-world from these attacks are becoming more advanced, but they are not foolproof. For example, firewalls, antivirus software, and intrusion detection systems can help to prevent cyber-attacks, but they are not 100% effective. Additionally, organizations can implement security protocols such as two-factor authentication and regular security updates, but these measures are not always implemented effectively.
+In a cyber warfare scenario, a nation-state could use cyber-attacks to disrupt critical infrastructure, such as power grids, transportation systems, and financial networks. This could cause widespread disruption and potentially lead to physical harm. Additionally, a nation-state could use cyber-attacks to steal sensitive information or disrupt the communication systems of its adversaries.
+It is difficult to estimate a specific timeframe for when a cyberwar is likely to happen, but it is clear that the threat of cyber-attacks is increasing. According to a report from the Center for Strategic and International Studies, the frequency of cyber incidents involving critical infrastructure has increased from an average of one per month in 2010 to over 200 per month in 2018.
+In conclusion, cyber-attacks can be as dangerous or even more dangerous than physical attacks as they can cause immediate harm, financial loss, and long-term consequences. The solutions available to protect the cyber-world are becoming more advanced, but they are not foolproof. Cyberwarfare is a real threat that can cause widespread disruption, steal sensitive information and disrupt communication systems. The frequency of cyber incidents involving critical infrastructure is increasing, and it's hard to estimate a specific timeframe for when a cyberwar is likely to happen.
+
+Set 3:
+Question 8: This question discusses performing searches and extracting information from Shodan. Please describe in 7-10 paragraphs, whether Shodan is increasing security or awareness among companies that design and sell IoT devices? How can Shodan be used by attackers? How can Shodan be used by defenders? In 2013, CNN stated that “Shodan: The scariest search engine on the Internet”, Is this true today? Do you agree or disagree, support your answer.
+
+Student1:
+Today, there are billions of IoT devices, many of which, be-
+cause of limited hardware capabilities, often have bad security.
+Securing these devices is very important - the attacks of the
+Mirai botnet showed the high magnitude of damage brought
+by infected IoT devices.
+The case study highlighted Shodan’s capabilities and how
+maliciously it can be used for launching attacks related to IoT
+devices. Even a security camera installed in a yard can give
+adversaries information that they might use for causing much
+harm. However, Shodan is also an excellent tool for security
+awareness and tracking vulnerabilities. Shodan exposes the
+vulnerabilities of anything that it indexes. IoT device man-
+ufacturers can use this information to improve the security of
+their products, and the knowledge that the vulnerabilities are
+publicly available acts as a motivator for them (they have to
+fix them as soon as possible before the adversaries discover
+them).
+Shodan is also widely used for researching the security of
+IoT devices. A Google Scholar search reveals that there are
+4300 papers that explicitly mention Shodan and security, and
+among these, there are 2090 papers (48.6%) that also explicitly
+mention IoT or the Internet of Things.
+Shodan can be used in many ways by malicious actors.
+Many powerful tools (e.g. Metasploit) use Shodan API.
+Shodan’s filter system allows users to find desired devices
+easily and quickly. For instance, with the ”vuln” filter, it is
+possible to search for devices with a certain vulnerability (e.g.
+Heartbleed). This can be very useful for an adversary that has
+created an exploitative program and is looking for devices for
+spreading it. The user-friendliness of Shodan also makes it
+possible for script kiddies to easily find publicly accessible
+devices (e.g. webcams) and tamper with them.
+Many devices on Shodan have the option of installing
+updates but are poorly protected. If an adversary gets access to
+such a device, he/she can install malware instead of updates.
+This malware can be of many types, for example, making the
+device a part of a botnet and then using it for DDoS attacks
+(This is what happened with the Mirai Botnet).
+Devices found on Shodan also include devices (e.g. pro-
+grammable logic circuits) that can be parts of critical in-
+frastructures. In this case, an adversary tampering with those
+devices would bring much harm. For example, as part of the
+research, to show the capabilities of Shodan, all of the nuclear
+power plants in France were identified.
+Shodan also contains information about many web servers
+worldwide. A malicious actor could use this information for
+orchestrating an appropriate attack, which might lead to data
+theft and privacy invasion.
+On the other hand, all these capabilities of Shodan can
+be used for good as well. White hat hackers can use it to
+scan networks, analyze devices and find vulnerabilities. They
+can then use the information gathered from Shodan to seal
+backdoor access to their devices, maintain secure banners, pro-
+tect accidentally exposed databases, or patch vulnerabilities.
+With the help of Shodan, all of these can be done before an
+adversary discovers those same vulnerabilities. Shodan also
+makes it possible to locate malware command and control
+servers. In that case, the defenders can even launch an attack
+on malicious servers.
+Shodan is also widely used by academic researchers for
+gathering data and drawing conclusions. As already discussed,
+a Google Scholar search of the terms ”Shodan” and ”security”
+result in 4300 papers about the topic.
+In 2013, CNN stated that “Shodan: The scariest search
+engine on the Internet.” Since then, cyberspace has changed
+very much. Although there are many ways of using Shodan
+maliciously, it is not appropriate to state that Shodan is still the
+scariest search engine. There are several reasons for this. First
+of all, Shodan has tried its best to limit the activity of malicious
+users - there’s a limit on the number of searches a person
+can do. Without registration, the limit is 10 searches, while
+with an account, the limit rises to 50 [2]. If the user needs
+more searches, they’ll need to buy one of Shodan’s premium
+packets and state their intentions. Also, some filters (e.g. tags)
+are unavailable unless the user buys the paid packets. The
+purchase will reveal some information about the user, thus no
+malicious actors will be using Shodan at its full capability.
+Other than that, Shodan has many alternatives, such as
+ZoomEye, Censys, or Criminal IP, which do not have strict
+search limits.
+
+Student2:
+Shodan is a search engine that other than displaying websites, it reveals information about any device connected to the internet. According to Shodan, it is the first world’s search engine for internet-connected devices. At first sight, we might think that it is a very precious tool for hackers but in fact it is of no use as hackers use other more advanced tools to attack internet connected devices. Even though Shodan does not contribute much to the hacker’s world, it reveals how vulnerable IoT devices are and how anyone without deep knowledge can be able to gain access to a webcam, sensors or any device with minimal security. One of the most powerful functions of shodan is how it exposes the location of any device connected to the internet. This has caused big tech companies to consider taking extra measures to protect their IoT devices. There are various ways to achieve a higher level of security with the easiest one of them simply changing the default password that would make it challenging for hackers to gain access to these devices as it would be as hard as hacking a server.  Another way is by enabling multi-factor authentication with user’s IoT devices that would make it harder for hackers/ attackers to gain access without having access to the second authentication device.
+
+Hackers can use shodan to hack into devices by simply searching for devices with default passwords and obtain their open ports. The hacker can then search the default password for that device and can then login the system and cause damage, steal information or control the device. Most Iot devices password is not changed from their default password which makes them much easier to hack. Gaining access to a huge number of IoT devices can also trigger the development of DDoS army of botnets by creating a malware targeted to infect these vulnerable IoT devices. And as shodan shows the vulnerabilities of these devices, a tailored malware can be developed easier as much information is gathered to determine the best vulnerability to access to infect the greatest number of devices.
+
+On the other hand, shodan is an effective tool for defenders in many ways. Shodan can be used to discover devices with vulnerabilities or unnecessary open ports and fix this issue. Shodan is also used for research purposes as security specialists can use these tools along with their equipment to discover and rectify vulnerabilities. Moreover, it can be used to spread awareness to the public and show how vulnerable their unprotected devices are and the risks it imposes on their privacy and security.  There are various ways that could be used to increase the security of Iot devices that include setting a new password to these devices that would make it harder to break into. Companies should also be aware of these risks and ask their customers to change the password to use the device which would be critical to their privacy.  
+
+Till this day Shodan remains the most popular search engine of its kind, however, competitors such as ZoomEye, and BinaryEdge are becoming more famous in the domain. But does shodan still stand as the “Scariest search engine on the internet”? I believe in terms of search engines, shodan would hold that title, as even if it is intended for good and ethical purposes it also has a very powerful negative side that can be used for crimes. Shodan might be created with good intentions for research purposes but turned out to be a very powerful tool for hackers, or perhaps script kiddies as serious hackers would have more advanced tools and methods to perform attacks. The fact that anyone with minimal computer knowledge can find locations of devices all over the world that ranges from smart fridges and home cameras to nuclear facility and industrial control systems is not the norm.
+
+
+Student3:
+According to the security survey, in 2021, 91% of industrial
+organizations have encountered at least one incident related to
+cyber security. As Eddy Wade, principal industrial
+consultant at Dragos, a major cybersecurity firm in the Gulf
+region says: “Keeping industrial control systems and operational
+technology safe means protecting the most important structures
+of an organization … Cyberattacks targeting critical industries
+such as energy, oil, and gas, mining and pharmaceuticals will
+leverage disruption of sometimes dangerous physical equipment
+which we rely on as a society.” Formation and maintenance
+of rigid and strong cyber security are vital to any industrial firm
+nowadays, and it seems that its importance will only increase in
+years to come.
+As a tool, Shodan has both great advantages and
+disadvantages in terms of its possible use cases and scenarios
+that it can be incorporated into. Shodan can be used as a security
+research and testing tool as it enables users to explore different
+vulnerabilities in targeted devices and if used properly and in
+goodwill, it can act as a highly beneficial tool for vulnerability
+detection and cyber security maintenance. For instance, one
+might check his own IP address via Shodan and see what
+vulnerabilities are detected, or the Research and Development
+team in an IoT firm might run multiple Shodan searches on the
+devices that are in development to make alterations and/or
+reinforce devices’ security. Naturally, the process can be
+repeated, for instance, to make sure that the devices are not
+prone to new vulnerabilities that have originated after the latest
+firmware update and that there are no flaws left. Such a use case
+opens a great possibility for IoT device manufacturers to test
+their devices and facilitate research and development. In turn,
+this will have economic benefits since expenses on R&D will
+noticeably decrease. Having an extensive list of filters,
+manufacturers and individual users can identify potential threats
+to security and track exploits with the help of Shodan.
+Conversely, Shodan can be used in malicious ways.
+Individuals can look for under-protected devices and exploit the
+vulnerabilities that those have. In the case of unprotected CCTV
+cameras, they can use them to analyze security breaches or
+weaknesses and access the premises of a secured object, facility,
+private property, or any other place. In the case of ICS, they may
+halt the ongoing processes resulting in production delays for
+private companies (which will incur financial and reputational
+losses), and the breakdown of critical infrastructure elements
+which by itself creates numerous negative implications. They
+may also disturb the ground and air traffic regulations if the
+according systems are accessed, and this could certainly produce
+devastating consequences (aircraft and automotive accidents).
+Corporate networks can also get disrupted, which in turn would
+cease normal workflow and communications within a firm or a
+conglomerate if we are talking about an attack on a large-scale
+entity. Logically, this would result in financial, reputational,
+time, and many other losses for the stakeholder in question. It
+can affect the stock prices of the company and its long-term
+stability in the market.
+While it may appear that Shodan is an all-powerful utility
+that can tackle various devices, we believe that it is not as serious
+as it may initially appear. While it provides some meaningful
+assistance to attackers employing this tool, it primarily serves
+the role of the detection device. It does not directly participate
+in the orchestration of a malicious attack, but rather, provides a
+solid informational foundation regarding the target that is to be
+attacked. Relative to the exploits, botnets, cyber worms, and
+many other cyber threats that have been covered so far, Shodan
+does not present an immediate threat to the devices in question.
+Furthermore, it is worth considering that Shodan is not
+considered illegal, as it simply provides a way to scan ports of
+the devices that are connected to the internet, unlike the after-
+mentioned cyber threats and other tools that are available in
+DarkWeb for instance. It is the unethical use case that makes it
+seem like the source of the issue, however, one can use his or
+her knowledge of chemistry to fabricate DIY explosives or to
+synthesize aromatic compounds for fragrances. In both cases,
+the freely available tools and knowledge can lead to different
+end products, thus it is valid to say that it is the intent rather than
+the tool that presents a danger.
+
+GPT 1:
+Shodan is a search engine that specializes in finding Internet of Things (IoT) devices and other connected systems that are connected to the internet. It allows users to search for specific types of devices and view information about them, including IP addresses, open ports, and software versions.
+The use of Shodan can increase security and awareness among companies that design and sell IoT devices. By using Shodan, companies can discover any unsecured devices they have on the internet, and take steps to secure them. Additionally, Shodan can be used to monitor for vulnerabilities in devices, allowing companies to quickly patch them before they can be exploited.
+However, Shodan can also be used by attackers to find potential targets for cyberattacks. Attackers can use Shodan to search for specific types of devices, such as industrial control systems, and then use the information gathered to launch targeted attacks. Additionally, attackers can use Shodan to find vulnerable devices and then use those devices as a foothold to launch attacks on other systems.
+Shodan can also be used by defenders to identify and mitigate potential threats. Defenders can use Shodan to search for specific types of devices, such as industrial control systems, and then use the information gathered to identify and mitigate potential threats. Additionally, defenders can use Shodan to monitor for vulnerabilities in devices, allowing them to quickly patch them before they can be exploited.
+In 2013, CNN referred to Shodan as "The scariest search engine on the Internet" due to the potential for abuse and the ease of finding critical infrastructure and other sensitive systems. However, whether it is true or not today is a matter of perspective. On one hand, Shodan has helped to raise awareness of the security issues surrounding IoT devices and connected systems, which can be a positive thing, but on the other hand, it also provides a tool for attackers to easily find vulnerable devices.
+In conclusion, Shodan can be a powerful tool for both attackers and defenders, depending on how it is used. Companies that design and sell IoT devices can use Shodan to increase security and awareness, while attackers can use it to find vulnerable devices. It is important for companies to be aware of the risks and take steps to secure their devices, and for individuals to use Shodan responsibly.
+
+GPT 2:
+Shodan is a search engine that scans the internet for Internet of Things (IoT) devices and allows users to access information about their network configurations and open ports. The platform has been praised for increasing security and awareness among companies that design and sell IoT devices by allowing them to identify vulnerabilities and potential attack vectors. However, the same information that makes Shodan useful for defenders can also be used by attackers to exploit vulnerabilities.
+One of the main ways that Shodan is increasing security and awareness among companies is by allowing them to identify vulnerabilities in their own devices. For example, a company may discover that a specific port on one of their devices is open and vulnerable to attack, which they can then fix. Additionally, Shodan can be used to identify if devices are using outdated software or firmware, which can be a major security risk. By identifying these vulnerabilities, companies can take steps to improve the security of their devices and better protect their customers.
+However, the same information that is useful for defenders can also be used by attackers. For example, an attacker may use Shodan to identify vulnerable devices and then use that information to launch targeted attacks. Additionally, Shodan can be used to identify devices that are using default or easily guessable passwords, making it easier for attackers to gain access to them.
+Despite the potential risks, Shodan can also be used by defenders to identify and mitigate potential threats. For example, a defender may use Shodan to identify devices that are vulnerable to a specific exploit and then take steps to patch or block that exploit. Additionally, Shodan can be used to identify devices that are likely to be controlled by a botnet, which can then be taken down or blocked.
+In 2013, CNN referred to Shodan as “The scariest search engine on the Internet” due to its ability to identify vulnerable devices and the potential for those devices to be used in cyber attacks. However, whether or not this statement is still true today is debatable. While Shodan does have the potential to be used for malicious purposes, it can also be used for good by identifying vulnerabilities and helping companies improve the security of their devices.
+Overall, it can be said that Shodan is both a tool for attackers and defenders. It can be used to identify vulnerabilities and potential attack vectors, but it can also be used to identify and mitigate potential threats. Whether or not Shodan is the “scariest search engine on the Internet” depends on how it is used. In the hands of a skilled defender, it can be a powerful tool for improving security. However, in the hands of an attacker, it can be a powerful tool for exploiting vulnerabilities.
+GPT 3:
+Shodan is a search engine that specializes in finding Internet of Things (IoT) devices connected to the internet. It is considered a powerful tool for both attackers and defenders, as it can help identify vulnerabilities in IoT devices and network configurations.
+On one hand, Shodan can increase security and awareness among companies that design and sell IoT devices. By using Shodan, companies can scan their own devices and networks to identify potential vulnerabilities, such as unpatched software or weak passwords. This can help companies take proactive measures to fix these issues before they are exploited by attackers. Additionally, by using Shodan to scan the devices of competitors, companies can gain insight into the security practices of their industry peers and improve their own products accordingly.
+On the other hand, Shodan can also be used by attackers to identify vulnerable IoT devices and networks. Attackers can use Shodan to search for devices with known vulnerabilities, and then exploit those vulnerabilities to gain unauthorized access to the devices and networks. This can lead to data breaches, network disruptions, and other security incidents.
+To counter the potential risks posed by Shodan, companies and organizations can use the tool to identify and mitigate vulnerabilities in their own devices and networks. For example, organizations can use Shodan to scan their networks for devices with weak passwords or unpatched software, and then take steps to fix those issues. Additionally, organizations can use Shodan to monitor their networks for unusual activity, such as new devices appearing on the network or devices communicating with known malicious IP addresses.
+In 2013, CNN stated that "Shodan: The scariest search engine on the Internet." While it is true that Shodan can be used to identify vulnerable IoT devices and networks, it is also a powerful tool for identifying and mitigating those vulnerabilities. The tool can be used to increase security and awareness among companies that design and sell IoT devices, as well as to identify and mitigate vulnerabilities in networks and devices.
+Overall, I agree that Shodan is a powerful tool that can be used to identify vulnerabilities in IoT devices and networks. However, I also believe that the tool can be used to increase security and awareness among companies that design and sell IoT devices, as well as to identify and mitigate vulnerabilities in networks and devices. It is important to note that the tool can be used by attackers and defenders alike, so organizations should be aware of the potential risks and take steps to mitigate them.
+
+
+Question 9: This question discusses ethical and legal issues and policies for Shodan. Please describe, in 7-10 paragraphs, what are some ethical/legal issues that might arise while using Shodan?
+
+Student1:
+Shodan is a publicly available tool. Any vulnerable device
+indexed by Shodan can be found by a malicious actor. As
+we saw in the previous sections, the information found on
+Shodan can be used to bring much harm not only to devices
+but to human lives as well. This raises ethical and legal issues.
+Should such a tool be available to everyone?
+First of all, Shodan, after all, is a port scanner. In the US, for
+example, port scanning is a legal activity. This is because
+it is a tool that can be used both legally and illegally and both
+ethically and unethically. For example, searching devices on
+Shodan for research purposes is completely ethical and legal
+- it has a good cause. However, establishing any unauthorized
+access to the devices found on Shodan is unethical and illegal
+in many countries. Therefore, as long as we stay in the
+interface of Shodan and do not connect to the IP addresses
+found there, we will be staying within the bounds of ethics.
+There are several reasons why the use of Shodan should be
+allowed:
+1) As already discussed, Shodan has limitations against
+users that may be malicious. These limitations make sure
+that those users are unable to extensively use Shodan
+without giving away their identities.
+2) Although Shodan can be used maliciously, as already
+discussed, it also allows the owners of the devices to
+identify those vulnerabilities and fix them. Thus, it just
+accelerates the process of fixing/exploiting vulnerabili-
+ties. Even without Shodan and similar tools, the mali-
+cious actors would still be able to find vulnerabilities
+with tools such as Nmap. However, Shodan makes the
+process much easier, which means that device owners
+can better identify vulnerabilities in their devices. In
+this sense, banning Shodan would just hide an issue in
+security, not fix it.
+3) Shodan offers a great way for researchers, penetration
+testers, and security professionals to analyze the internet
+and better protect it
+
+Student2:
+Shodan doesn’t just “port-scan” anymore, simply by searching for “webcams” you get hundreds of thousands of results with some of them displayed with a preview from the camera which raises ethical and legal concerns as people’s privacy is being violated. Moreover, deeper search results on specific devices reveal information that is not related to just port scanning, for example, if you search for “in-tank inventory” you get thousands of results of devices used in fuel pump stations with details about the fuel tanks, their temperature, water level, and more. Moreover, obtaining a screenshot of the login page of the organizations systems is not possible through port scanning which raises suspicions on possible different ways Shodan obtain its information. And displaying such detailed information is not really going to be useful for research purposes but would rather be of a great benefit to hackers or potential attackers.
+All these details are displayed on the information page of that particular device that might oppose the main purpose of Shodan.
+
+
+Student3:
+While currently Shodan is not considered an illegal tool in
+many countries, including the US, there are still many questions
+and doubts regarding whether it is safe to allow such tools to
+exist and be accessed by unidentified users freely. There are
+various arguments that can be constructed, and we will cover
+some of them.
+One can argue that free access to information is a
+fundamental right and since Shodan falls under the category of
+an information source, it should be treated as any other source
+and should not receive any unnecessary censorship. However,
+hindering or restricting access to information may be justified
+by governments that consider the information presented as a
+threat to national security or the security of private firms and
+other parties operating in the country.
+At the same time, free access to information is beneficial too,
+as it enables individuals and organizations to gain and deepen
+their knowledge about the importance of cyber security.
+Numerous contributions to the cyber security sphere that can
+potentially be produced due to the use of Shodan-like tools
+should not be disregarded, in spite of all the possible dangers
+that come with it.
+
+
+GPT 1:
+Shodan is a powerful search engine that allows users to find internet-connected devices and systems, including security cameras, industrial control systems, and servers. While this tool can be useful for security researchers and network administrators, there are also potential ethical and legal issues that arise when using Shodan.
+One ethical concern is the potential for privacy violations. Shodan can be used to find and access cameras, security systems, and other devices that are connected to the internet. This can include cameras used for home security or surveillance, which may capture sensitive personal information. Additionally, Shodan can also be used to find and access industrial control systems, which can control critical infrastructure like power plants and water treatment facilities. Accessing these systems without permission could result in serious consequences, both for the individual and for the public at large.
+Another ethical concern is the potential for misuse of Shodan. For example, an attacker could use Shodan to identify and target vulnerable systems, such as those that are not properly secured or are running outdated software. Additionally, criminals could use Shodan to find and access servers hosting sensitive information, such as personal data or financial information.
+From a legal perspective, using Shodan to access systems or devices without permission could be considered unauthorized access or hacking. This is a criminal offense and could result in fines and/or imprisonment. Additionally, using Shodan to access critical infrastructure systems could be considered an act of terrorism, which carries even harsher penalties.
+To mitigate these issues, it is important for users of Shodan to be aware of the ethical and legal implications of their actions. For example, users should only access systems or devices for which they have permission, and should not attempt to access systems that could cause harm or damage. Additionally, users should not attempt to access systems or devices that are considered critical infrastructure, such as power plants or water treatment facilities.
+Furthermore, it is also important for users of Shodan to ensure they are following best practices for security. This includes keeping the software up-to-date, using strong passwords, and using encryption to protect sensitive information.
+In conclusion, Shodan is a powerful tool that can be used for both legitimate and malicious purposes. It is important for users to be aware of the ethical and legal implications of their actions and to use the tool responsibly. Moreover, users should be aware of the potential for privacy violations and misuse and take steps to mitigate these risks. Additionally, users should be aware of the potential legal consequences of their actions and should not attempt to access systems or devices without permission.
+
+GPT 2:
+Shodan is a powerful search engine that allows users to search for internet-connected devices and networks, including servers, cameras, and industrial control systems. While this tool can be useful for cybersecurity professionals and researchers, it also raises several ethical and legal issues.
+One issue is privacy. Shodan allows users to search for and access information about devices and networks that may be connected to sensitive or private information. This includes information about the location, configuration, and even live video feeds of devices such as security cameras. This access could potentially be used for malicious purposes, such as identity theft or surveillance.
+Another issue is security. Shodan can also be used to search for vulnerabilities in internet-connected devices and networks. This can be useful for identifying and patching security vulnerabilities, but it can also be used by malicious actors to exploit those vulnerabilities. This could lead to data breaches, system shutdowns, or even physical damage.
+A third issue is unauthorized access. Shodan allows users to search for and access devices and networks that they may not be authorized to access. This could include accessing devices and networks that are owned by other individuals or organizations. This unauthorized access could be considered illegal, depending on the laws of the jurisdiction in which the user is located.
+A fourth issue is data ownership and control. Shodan allows users to access and collect information about devices and networks that may be owned by other individuals or organizations. This can raise questions about who owns and controls the data that is collected and how it can be used. This could potentially lead to disputes over data ownership and control.
+A fifth issue is data breaches. Shodan can be used to search for and access devices and networks that may have been compromised. This could potentially lead to data breaches if the user is not careful. This is especially true if the user is not a cybersecurity professional and does not know how to properly handle the data that is collected.
+A sixth issue is compliance. Shodan can be used to search for and access devices and networks that may be in violation of regulations and compliance laws. This could include devices and networks that are not compliant with data privacy laws, such as the General Data Protection Regulation (GDPR) in the EU.
+In conclusion, while Shodan is a powerful tool that can be useful for cybersecurity professionals and researchers, it also raises several ethical and legal issues. These include privacy, security, unauthorized access, data ownership and control, data breaches, and compliance. Users of Shodan should be aware of these issues and take appropriate precautions to ensure that they are using the tool in a legal and ethical manner.
+
+GPT 3:
+Shodan is a search engine that allows users to find and access internet-connected devices, including security cameras, industrial control systems, and other types of IoT devices. While the tool can be used for legitimate purposes, such as vulnerability assessments and penetration testing, it can also be used for unethical or illegal activities. Therefore, it is important to consider the ethical and legal issues that may arise while using Shodan.
+One ethical issue that may arise when using Shodan is the potential for privacy violations. Many of the devices indexed by Shodan, such as security cameras and home automation systems, may contain sensitive information about individuals. For example, a user may be able to access a live feed from a security camera installed in a private residence, potentially allowing them to view private activities of the occupants. Additionally, some devices may contain personal information, such as login credentials, that could be used for malicious purposes.
+Another ethical issue related to Shodan is the potential for unauthorized access to critical systems. Many of the devices indexed by Shodan are part of industrial control systems or other critical infrastructure. Unauthorized access to these systems could potentially cause harm to individuals or disrupt important services. For example, a hacker could use Shodan to find and access a control system for a water treatment facility, potentially causing the release of contaminated water.
+A legal issue that may arise when using Shodan is the violation of computer crime laws. Many countries have laws that prohibit unauthorized access to computer systems, and accessing devices through Shodan without permission could be considered a violation of these laws. Additionally, some countries have specific laws related to the unauthorized access of industrial control systems, which could also be violated by using Shodan.
+Another legal issue related to Shodan is the violation of data protection laws. Many countries have laws that prohibit the collection, storage, and use of personal data without consent. By accessing devices through Shodan, a user may be able to collect sensitive personal information that could be used for malicious purposes. Additionally, some countries have laws that prohibit the distribution of personal data without consent, which could be violated by sharing information found through Shodan.
+In addition to these issues, there may be specific legal and ethical considerations related to the use of Shodan in certain industries or for certain types of devices. For example, the healthcare industry may have strict regulations related to the protection of personal health information, and accessing medical devices through Shodan could be considered a violation of these regulations. Similarly, the financial industry may have strict regulations related to the protection of personal financial information, and accessing financial devices through Shodan could be considered a violation of these regulations.
+To avoid these ethical and legal issues, it is important for users of Shodan to understand and comply with relevant laws and regulations. Additionally, users should consider the potential consequences of their actions before accessing devices through Shodan, and should only access devices for legitimate purposes. Users should also be aware of the potential for privacy violations, unauthorized access to critical systems, and other negative consequences when using the tool.
+In conclusion, Shodan is a powerful tool that can be used for legitimate purposes, but it can also be used for unethical or illegal activities. Therefore, it is important to consider the ethical and legal issues that may arise when using the tool. Users should comply with relevant laws and regulations and should only access devices for legitimate purposes. Additionally, users should consider the potential consequences of their actions before accessing devices through Shodan.
+
+
+Question 10: This question discusses policies for using Shodan. Imagine that you are a cybersecurity policy maker today, give 3 reasons why you would restrict or allow the use of Shodan? Write a policy, try to make it inclusive to cover other similar tools, that outlines the legality of the use of Shodan-like tools.
+
+Student1:
+A sample policy regarding the use of Shodan and similar
+tools:
+1) Purpose - To define the restrictions and requirements for
+publicly available device-indexing search engines.
+2) Scope - This policy applies to all search engines or tools
+that are publicly available and index devices connected
+to the internet. These will be mentioned as ”specified
+tools” throughout the rest of the policy.
+3) Exposing Critical Information - The specified tools
+may expose some information that wasn’t meant to be
+exposed to the public. Several regulations have to be
+maintained to minimize the chance of this information
+falling into the hands of malicious actors.
+If the specified tool exposes such information:
+• Each user of the specified tool must provide their
+personal information in order to use the specified
+tool with its full functionality.
+• Only minimal functionality should be available for
+the use of the tool without providing personal infor-
+mation. These limitations include but are not limited
+to:
+– Limited number of searches
+– Limited available filters
+– Limited search results
+These limitations may not apply if the tool offers only
+general statistics rather than information about specific
+devices.
+4) Critical Infrastructures - the specified tool must hide the
+devices that, if compromised, can bring harm to critical
+infrastructures of the country. Refer to the country’s
+legislature for the definition of critical infrastructures.
+5) User Guidance - the website hosting the specified tool
+must also provide a guide to a user on how to adequately
+use the tool and how not to step outside the bounds of
+ethics. The website must also discourage the user from
+establishing a connection with devices found with the
+specified tool.
+
+Student2:
+Shodan use should be restricted to its targeted market only. Even though hackers would use other tools to perform their hacks, private information should not be displayed out to the public “Legally” as done by Shodan. In my opinion, Shodan should only be used by research facilities and by security companies that would make optimal and legal use of the tool. Shodan should also not display detailed information and extracted data from vulnerable devices found when port-scanning. Even though shodan displays vulnerabilities of these devices based on their operating systems and software they use that can be found through other sources, displaying it to the public and especially hackers would make it easier for them to exploit those vulnerabilities hence if a version of Shodan is made to the public, it should not display the vulnerabilities of these devices. These policies should also be implemented on all Shodan-like search engines.
+
+
+Student3:
+Shodan is not entirely unique in the sense that there are other
+similar scanning tools that exist freely on the internet. For a
+government body, accounting for each and every tool individual
+would be unreasonable and impractical. A uniform policy
+regarding the scanning engines like Shodan that would cover all
+the relevant aspects can be potentially introduced by
+governments in order to define exact boundaries on what is
+allowed and what is not.
+Such a policy could cover various points, including
+obligatory background checks for individuals/organizations
+involved in the use of Shodan-like search engines. This could
+eliminate the threat from certain parties wishing to employ the
+tools in malicious ways, but it will happen at the expense of free
+access to information, which is arguably one of the most crucial
+rights existing nowadays. A more comprehensive approach
+would be to clearly define the legality of different use scenarios
+of Shodan-like tools. This could involve, for instance, the
+implementation of user protocols that would only allow the use
+cases that involve testing of one’s own devices and equipment,
+and limit access to the devices beyond one’s own IP address.
+Alternatively, governments can impose extensive security
+requirements related to the available functionality and enabled
+use cases to Shodan and other companies directly. This would
+put the burden of complying with security standards on the
+companies, which evidently will negatively impact them, but it
+might in turn reduce the rate of criminal activity that involves
+the use of Shodan-like tools and services.
+
+
+GPT 1:
+	•	Restricting the use of Shodan:
+	•	To protect the privacy and security of individuals and organizations. Shodan collects and makes publicly available sensitive information such as IP addresses, device types, and software versions, which can be used by cybercriminals to target vulnerabilities.
+	•	To prevent misuse of the tool for illegal activities such as hacking and cyber espionage. Shodan can be used to identify and exploit vulnerabilities in systems, potentially leading to unauthorized access and data breaches.
+	•	To comply with regulatory requirements such as the General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA), which prohibit the collection and sharing of personal data without consent.
+Policy for the use of Shodan-like tools:
+The use of Shodan-like tools is only allowed for legitimate and lawful purposes, such as vulnerability assessment, penetration testing, and incident response. The following conditions must be met:
+	•	The tool must only be used by authorized personnel with a valid business need and proper training.
+	•	The tool must not be used to collect, store, or share personal data without consent.
+	•	The tool must not be used to access or disrupt systems or networks without permission.
+	•	Any findings or data collected must be handled and reported in accordance with relevant laws and regulations.
+	•	Any use of the tool must be reported to the appropriate authorities in case of any suspicious or malicious activity.
+Violations of this policy will result in disciplinary action, including termination of employment or contract.
+In conclusion, the use of Shodan-like tools must be closely monitored and regulated to protect the privacy and security of individuals and organizations. The tool can be used for legitimate and lawful purposes, but it must be used in accordance with relevant laws and regulations.
+
+GPT 2:
+	•	Risk of data breaches and cyber attacks: One of the primary reasons to restrict the use of Shodan and similar tools is the potential risk of data breaches and cyber attacks. These tools can be used by malicious actors to identify vulnerabilities in a company's network and exploit them for financial gain or to steal sensitive information.
+	•	Compliance with regulations: Another reason to restrict the use of Shodan and similar tools is to ensure compliance with regulations such as the General Data Protection Regulation (GDPR) or the Health Insurance Portability and Accountability Act (HIPAA). These regulations prohibit the collection, storage, and use of personal data without explicit consent and can be violated by using these tools.
+	•	Benefit for cybersecurity professionals: On the other hand, allowing the use of Shodan and similar tools can provide significant benefits for cybersecurity professionals. These tools can be used to identify vulnerabilities in a company's network and to monitor for potential threats, enabling companies to better protect themselves from cyber attacks.
+Policy:
+The use of Shodan and similar tools is restricted for all employees and contractors within our organization. These tools may not be used to collect, store, or use personal data without explicit consent. The only exception to this rule is for authorized cybersecurity professionals who are using these tools for the purpose of identifying vulnerabilities and monitoring for potential threats to our organization. Any unauthorized use of Shodan or similar tools will result in disciplinary action, up to and including termination of employment or termination of contract.
+
+GPT 3:
+	•	Restriction Reason 1: Shodan can be used to identify and exploit vulnerabilities in critical infrastructure systems. This poses a significant security risk as it can be used to conduct cyber attacks on power grids, water treatment plants, and other critical systems.
+	•	Restriction Reason 2: Shodan can also be used to gather sensitive personal information, such as IP addresses, login credentials, and other private data. This can lead to identity theft and other malicious activities.
+	•	Allow Reason: Shodan can be used for legitimate cybersecurity research and vulnerability assessments. It can help identify and patch vulnerabilities in systems, making them more secure.
+Policy:
+The use of Shodan-like tools is restricted for all individuals and organizations, except for authorized cybersecurity researchers and vulnerability assessors. These authorized individuals and organizations must have written permission from the appropriate authorities and must agree to strict guidelines for data usage, handling, and reporting. Any unauthorized use of Shodan-like tools will result in immediate legal action.
+
+

@@ -1,8 +1,8 @@
 import numpy as np
+import spacy
 import torch
 import time
 
-from tqdm import tqdm
 from transformers import GPT2Tokenizer, GPTNeoForCausalLM, GPT2LMHeadModel, GPTNeoXPreTrainedModel, \
     GPTNeoXTokenizerFast, GPTNeoXForCausalLM
 
@@ -11,7 +11,6 @@ from backend.class_register import register_api
 
 import MoreThanSentiments as mts
 import pandas as pd
-import spacy
 
 from statistics import fmean
 
@@ -122,7 +121,6 @@ class LM(AbstractLanguageChecker):
 
         ppl = torch.exp(torch.stack(nlls).sum() / end_loc)
 
-        # print(f"PPL before: {ppl.data}")
         return ppl.data
 
     @staticmethod
@@ -235,6 +233,16 @@ def main():
     will be. However, they have the potential to revolutionize fields such as drug discovery, machine learning, 
     and financial modeling, among others. """
 
+    raw_text = """However, we find that the current PPL cannot fairly evaluate the text quality (i.e., fluency) when 
+    meeting the following scenarios. (i) The texts to be evaluated have different lengths (Meister and Cotterell, 
+    2021b). In fact, text quality is not strictly related to length. However, we find that the PPL is sensitive to 
+    text length, e.g., the PPL of short text is larger than long text. (ii) The texts to be evaluated have some 
+    repeated span(s). Of course, sometimes creators use repeated text span(s) to express emphasis et al.. However, 
+    PPL cannot distinguish between the right emphasis and abnormal repetition, and always foolishly assigns lower 
+    scores to text that is not fluent but has repeated spans. (iii) The texts to be evaluated are sensitive to 
+    punctuation marks. For example, we have two texts, the former ends with punctuation, and the latter deletes the 
+    last punctuation. In theory, the qualified metric should compute the same or similar value. However, there is a 
+    significant difference between the PPL values of those two texts. """
     '''
     Tests for GPT-2
     '''
