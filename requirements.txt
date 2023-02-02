@@ -5,6 +5,7 @@ connexion[swagger-ui]~=2.14.1
 flask~=2.2.2
 PyYaml
 flask_cors
+flask_wtf
 
 MoreThanSentiments~=0.2.1
 pandas~=1.2.5

@@ -86,6 +86,7 @@ def print_perplexities(folder_name):
     column_names = ["type", "question", "num", "ppl"]
     l = []
     for root, dirs, files in os.walk(folder_name):
+        index = 0
         for file_name in files:
             full_path = os.path.join(root, file_name)
             column_values = file_name.split('_')
@@ -121,16 +122,34 @@ df2.sort_values(by=['question', 'num'], inplace=True)
 group_by_type_student = df2.loc[df2['type'] == 'student'].groupby(['question'])['ppl'].mean()
 group_by_type_gpt = df2.loc[df2['type'] == 'gpt'].groupby(['question'])['ppl'].mean()
 group_by_question_by_type = df2.groupby(['question', 'type']).mean('ppl').unstack('type')
-group_by_question = df2.groupby(['question']).mean('ppl')
 
 figure, axis = plt.subplots(2, 2)
-
 figure.tight_layout(pad=2.0)
-axis[0, 0].plot(group_by_type_student, label='group_by_type_student')
-axis[0, 0].set_xlabel('question_num')
-axis[0, 0].set_ylabel('mean perplexity')
-axis[0, 1].plot(group_by_type_gpt, label='group_by_type_gpt')
-axis[1, 0].plot(group_by_question_by_type, label='group_by_question_by_type')
-axis[1, 1].plot(group_by_question, label='group_by_question')
+
+f1 = axis[0, 1]
+f1.plot(group_by_type_student)
+f1.set_title('Group by Type = Student', fontdict={'fontsize': 8})
+f1.set_xlabel('question_num')
+f1.set_ylabel('mean perplexity')
+
+
+f2 = axis[0, 1]
+f2.plot(group_by_type_gpt)
+f2.set_title('Group by Type = GPT', fontdict={'fontsize': 8})
+f2.set_xlabel('question_num')
+f2.set_ylabel('mean perplexity')
+
+f3 = axis[1, 0]
+f3.plot(group_by_question_by_type)
+f3.set_title('Group by Type = GPT', fontdict={'fontsize': 8})
+f3.set_xlabel('question_num')
+f3.set_ylabel('mean perplexity')
+
+print(df2.head())
+
+f4 = axis[1, 1]
+f4.plot(df2['ppl'], df2[['question', 'type', 'num']])
+f4.set_xlabel('question_num')
+f4.set_ylabel('perplexity')
 
 plt.show()
